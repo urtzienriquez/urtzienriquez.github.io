@@ -107,7 +107,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : ""
   avatar           : "/assets/images/inTheField_v3.jpg"
   bio              : "I am an **biologist**."
   location         : "Somewhere"
