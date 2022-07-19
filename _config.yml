@@ -299,3 +299,14 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      header:
+        overlay_color: "#2f3036"
+        overlay_image: /assets/images/near_papunya.jpg
+        caption: "Photo credit: **Michael Kearney**"
