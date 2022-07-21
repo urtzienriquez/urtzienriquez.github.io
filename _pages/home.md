@@ -1,6 +1,7 @@
 ---
 title: "Welcome"
 layout: splash
+author_profile: true
 permalink: /
 ---
 
