@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "About me"
-    url: https://urtzienriquez.github.io/pages/about/
+    url: https://urtzienriquez.github.io/_pages/about/
   - title: "Publications"
-    url: https://urtzienriquez.github.io/pages/publications/
+    url: https://urtzienriquez.github.io/_pages/publications/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
