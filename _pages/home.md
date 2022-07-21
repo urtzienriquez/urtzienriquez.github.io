@@ -1,6 +1,6 @@
 ---
 title: "Welcome"
-layout: single
+layout: splash
 permalink: /
 ---
 
