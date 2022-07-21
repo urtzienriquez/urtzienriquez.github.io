@@ -4,6 +4,6 @@ layout: single
 permalink: /
 ---
 
-<h2> First post </h2>
+<h1> First post </h1>
 
 Under construction
