@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Home"
+    url: https://urtzienriquez.github.io/home/
   - title: "About me"
     url: https://urtzienriquez.github.io/about/
   - title: "Publications"
