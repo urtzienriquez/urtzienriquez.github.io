@@ -1,6 +1,7 @@
 ---
 title: "Welcome"
 layout: single
+toc: true
 permalink: /
 ---
 
