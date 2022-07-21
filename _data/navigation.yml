@@ -4,6 +4,8 @@ main:
     url: https://urtzienriquez.github.io/
   - title: "About me"
     url: https://urtzienriquez.github.io/about/
+  - title: "Research"
+    url: https://urtzienriquez.github.io/research/
   - title: "Publications"
     url: https://urtzienriquez.github.io/publications/
   # - title: "Sample Posts"
