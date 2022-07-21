@@ -4,7 +4,6 @@ layout: single
 permalink: /publications/
 ---
 
-<font size="1"> 
 
 ### 2022
 
@@ -43,4 +42,3 @@ Sillero, N., Arenas-Castro, S., **Enriquez-Urzelai, U.**, Vale, C. G., Sousa-Gue
 **Enriquez-Urzelai, U.**, San Sebastián, O., Garriga, N., and Llorente, G. A. (2013). Food availability determines the response to pond desiccation in anuran tadpoles. *Oecologia* **173**, 117–127.
 
 
-</font> 
