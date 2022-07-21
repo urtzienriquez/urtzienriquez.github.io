@@ -308,5 +308,5 @@ defaults:
       author_profile: true
       header:
         overlay_color: "#2f3036"
-        overlay_image: /assets/images/slide-1.jpg
+        overlay_image: /assets/images/slide-1_claro.jpg
         caption: "Photo: **Alfredo G. Nicieza**"
