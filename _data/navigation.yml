@@ -1,7 +1,9 @@
 # main links
 main:
-  - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "About me"
+    url: https://urtzienriquez.github.io/pages/about/
+  - title: "Publications"
+    url: https://urtzienriquez.github.io/pages/publications/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
