@@ -5,7 +5,6 @@ classes: wide
 permalink: /publications/
 ---
 
-
 ### 2022
 
 **Enriquez-Urzelai, U.**, and Boratyński, Z. (2022). Energetic dissociation of individual and species ranges. *Biology Letters* **18**, 20210374.
