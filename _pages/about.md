@@ -4,6 +4,6 @@ layout: single
 permalink: /about/
 ---
 
-## About me
+<h1> About me </h1>
 
 Under construction
