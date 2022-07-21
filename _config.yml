@@ -114,8 +114,8 @@ analytics:
 author:
   name             : ""
   avatar           : "/assets/images/picture.jpg"
-  bio              : "I am an **biologist**."
-  location         : "Somewhere"
+  bio              : "I am a **biologist**."
+  location         : "Studenec, Czechia"
   email            :
   links:
     - label: "Email"
@@ -126,17 +126,11 @@ author:
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://twitter.com/urenur1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
-
+      url: "https://github.com/urtzienriquez"
+    
 # Site Footer
 footer:
   links:
