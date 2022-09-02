@@ -7,6 +7,12 @@ permalink: /publications/
 
 ### 2022
 
+Kearney, M.R. and **Enriquez-Urzelai, U.** (2022). A general framework for jointly modelling thermal and hydric constraints on developing eggs. *Under review*
+
+Gutiérrez-Pesquera, L.M., Tejedo, M., Camacho, A., **Enriquez-Urzelai, U.**, Katzenberger, M., Choda, M., Pintanel, P., and Nicieza, A.G. (2022).  Phenology and plasticity can prevent adaptive clines in thermal tolerance across temperate mountains: the importance of the elevation-time axis. *Under review*
+
+**Enriquez-Urzelai, U.**, Martínez-Freiría, F.,  Freitas, I., Perera, A., Martínez-Solano, Í., Salvi, D., Velo-Antón, G., and Kaliontzopoulou, A. (2022). Allopatric speciation, niche conservatism and gradual phenotypic change in the evolution of European green lizards. *Journal of Biogeography* Accepted.
+
 **Enriquez-Urzelai, U.**, and Boratyński, Z. (2022). Energetic dissociation of individual and species ranges. *Biology Letters* **18**, 20210374.
 
 **Enriquez-Urzelai, U.**, Nicieza, A. G., Montori, A., Llorente, G. A., and Urrutia, M. B. (2022). Physiology and acclimation potential are tuned with phenology in larvae of a prolonged breeder amphibian. *Oikos* **2022**, e08566.
