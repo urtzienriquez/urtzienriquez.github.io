@@ -2,9 +2,8 @@
 title: "Welcome"
 layout: single
 permalink: /
+show_date: true
 ---
 
 <h1> New website and new publication... </h1>
-<span style="color:#6B6B6B ;"><i>29 Sept 2022</i>
- 
 ... about the diversification of green lizards (genus <i>Timon</i> and <i>Lacerta</i>). 
