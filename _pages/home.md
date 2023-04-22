@@ -1,9 +1,8 @@
 ---
 title: "Welcome"
-layout: single
+layout: posts
 permalink: /
 show_date: true
+author_profile: true
 ---
 
-### New website and new publication...
-... about the diversification of green lizards (genus *Timon* and *Lacerta*). 
