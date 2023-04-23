@@ -1,17 +1,13 @@
 ---
-defaults:
-  _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+title: "New publication about the diversification of green lizards"
+categories:
+  - Edge Case
+tags:
+  - publication
 ---
 
-# bla bla
-bla bla
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
+
+ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble .
+
+bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli bli.
