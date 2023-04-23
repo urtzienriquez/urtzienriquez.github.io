@@ -1,7 +1,5 @@
 ---
 title: "New paper about the diversification of green lizards"
-categories:
-  - Edge Case
 tags:
   - publication
 ---
