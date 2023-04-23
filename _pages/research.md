@@ -3,6 +3,8 @@ title: "Research"
 layout: single
 author_profile: false
 toc: true
+toc_sticky: true
+toc_label: "Research topics"
 permalink: /research/
 ---
 
