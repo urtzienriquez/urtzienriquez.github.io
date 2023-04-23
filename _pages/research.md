@@ -1,6 +1,8 @@
 ---
 title: "Research"
 layout: single
+author_profile: false
+toc: true
 permalink: /research/
 ---
 
