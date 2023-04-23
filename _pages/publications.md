@@ -5,6 +5,10 @@ classes: wide
 permalink: /publications/
 ---
 
+### 2023
+
+Kearney, M.R. and **Enriquez-Urzelai, U.** (2023). A general framework for jointly modelling thermal and hydric constraints on developing eggs. *Methods in Ecology and Evolution* **14**, 583-595. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14018" target="_blank" style="color:blue;">link</a>
+
 ### 2022
 
 Kearney, M.R. and **Enriquez-Urzelai, U.** (2022). A general framework for jointly modelling thermal and hydric constraints on developing eggs. *Methods in Ecology and Evolution* **14**, 583-595. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14018" target="_blank" style="color:blue;">link</a>
