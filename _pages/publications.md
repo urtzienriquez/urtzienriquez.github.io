@@ -8,6 +8,8 @@ permalink: /publications/
 
 ### 2023
 
+Reyes-Puig, C., Adams, D.C., **Enriquez-Urzelai, U.**, and Kaliontzopoulou, A. Rensch’s Rule: linking intraspecific to evolutionary allometry. Evolution, in press.
+
 Kearney, M.R. and **Enriquez-Urzelai, U.** (2023). A general framework for jointly modelling thermal and hydric constraints on developing eggs. *Methods in Ecology and Evolution* **14**, 583-595. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14018" target="_blank" style="color:blue;">link</a>
 
 ### 2022
@@ -16,7 +18,7 @@ Kearney, M.R. and **Enriquez-Urzelai, U.** (2023). A general framework for joint
 
 Gutiérrez-Pesquera, L.M., Tejedo, M., Camacho, A., **Enriquez-Urzelai, U.**, Katzenberger, M., Choda, M., Pintanel, P., and Nicieza, A.G. (2022).  Phenology and plasticity can prevent adaptive clines in thermal tolerance across temperate mountains: the importance of the elevation-time axis. *Ecology and Evolution* **12**, e9349. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.9349" target="_blank" style="color:blue;">link</a> 
 
-**Enriquez-Urzelai, U.**, and Boratyński, Z. (2022). Energetic dissociation of individual and species ranges. *Biology Letters* **18**, 20210374. <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsbl.2021.0374" target="_blank" style="color:blue;">link</a> 
+**Enriquez-Urzelai, U.** and Boratyński, Z. (2022). Energetic dissociation of individual and species ranges. *Biology Letters* **18**, 20210374. <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsbl.2021.0374" target="_blank" style="color:blue;">link</a> 
 
 **Enriquez-Urzelai, U.**, Nicieza, A. G., Montori, A., Llorente, G. A., and Urrutia, M. B. (2022). Physiology and acclimation potential are tuned with phenology in larvae of a prolonged breeder amphibian. *Oikos* **2022**, e08566. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/oik.08566" target="_blank" style="color:blue;">link</a> 
 
