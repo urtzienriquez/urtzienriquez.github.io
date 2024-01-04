@@ -4,7 +4,7 @@ layout: single
 permalink: /about/
 ---
 
-I am a physiological ecologist based at the Institute of Vertebrate Biology (Czech Academy of Sciences, Czechia).
+I am a physiological and evolutionary ecologist based at the Institute of Vertebrate Biology (Czech Academy of Sciences, Czechia).
 
 ### Link to public profiles
 
