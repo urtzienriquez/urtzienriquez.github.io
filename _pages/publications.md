@@ -8,7 +8,7 @@ permalink: /publications/
 
 ### 2023
 
-Reyes-Puig, C., Adams, D.C., **Enriquez-Urzelai, U.**, and Kaliontzopoulou, A. Rensch’s Rule: linking intraspecific to evolutionary allometry. Evolution, in press.
+Reyes-Puig, C., Adams, D.C., **Enriquez-Urzelai, U.**, and Kaliontzopoulou, A. Rensch’s Rule: linking intraspecific to evolutionary allometry. Evolution, **77**, 2576-2589. <a href="https://academic.oup.com/evolut/article-abstract/77/12/2576/7280287" target="_blank" style="color:blue;">link</a>
 
 Kearney, M.R. and **Enriquez-Urzelai, U.** (2023). A general framework for jointly modelling thermal and hydric constraints on developing eggs. *Methods in Ecology and Evolution* **14**, 583-595. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14018" target="_blank" style="color:blue;">link</a>
 
