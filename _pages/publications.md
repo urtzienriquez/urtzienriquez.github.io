@@ -6,9 +6,18 @@ classes: wide
 permalink: /publications/
 ---
 
+### 2024
+
+**Enriquez-Urzelai, U.**, & Gvoždík, L. (2024). Impacts of behaviour and acclimation of metabolic rate on energetics in sheltered ectotherms: a climate change perspective. *Proceedings of the Royal Society B*, **291(2017)**, 20232152. <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2023.2152" target="_blank" style="color:blue;">link</a>
+
+Reyes‐Puig, C., **Enriquez‐Urzelai, U.**, Carretero, M. A., & Kaliontzopoulou, A. (2024). Is it all about size? Dismantling the integrated phenotype to understand species coexistence and niche segregation. *Functional Ecology*. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2435.14646" target="_blank" style="color:blue;">link</a>
+
+Pintanel, P., Tejedo, M., Camacho, A., **Enriquez‐Urzelai, U.**, Llorente, G. A., & Merino‐Viteri, A. (2024). Physiological thermal niches, elevational ranges and thermal stress in dendrobatid frogs: An integrated approach. *Journal of Biogeography*. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14860" target="_blank" style="color:blue;">link</a>
+
+
 ### 2023
 
-Reyes-Puig, C., Adams, D.C., **Enriquez-Urzelai, U.**, and Kaliontzopoulou, A. Rensch’s Rule: linking intraspecific to evolutionary allometry. Evolution, **77**, 2576-2589. <a href="https://academic.oup.com/evolut/article-abstract/77/12/2576/7280287" target="_blank" style="color:blue;">link</a>
+Reyes-Puig, C., Adams, D.C., **Enriquez-Urzelai, U.**, and Kaliontzopoulou, A. Rensch’s Rule: linking intraspecific to evolutionary allometry (2023). *Evolution*, **77**, 2576-2589. <a href="https://academic.oup.com/evolut/article-abstract/77/12/2576/7280287" target="_blank" style="color:blue;">link</a>
 
 Kearney, M.R. and **Enriquez-Urzelai, U.** (2023). A general framework for jointly modelling thermal and hydric constraints on developing eggs. *Methods in Ecology and Evolution* **14**, 583-595. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14018" target="_blank" style="color:blue;">link</a>
 
