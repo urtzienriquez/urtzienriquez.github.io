@@ -5,8 +5,9 @@ date: 2025-03-27T00:00:00.000Z
 weight: 30
 summary: A very brief introduction on using the DataFrames package in Julia
 tags:
-  - biophysics
-  - modelling
+  - Julia
+  - data analyses
+  - statistics
 format: hugo-md
 jupyter: julia-1.11
 ---

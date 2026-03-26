@@ -58,6 +58,12 @@
   pageRef = "programming/julia"
   weight = 1
 
+[[main]]
+  parent = "Programming"
+  name = "R"
+  pageRef = "programming/r"
+  weight = 2
+
 #[[main]]
 #  name = "Parent"
 #  weight = 20
