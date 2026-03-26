@@ -3,7 +3,7 @@ title: Making plots with Makie.jl
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-26T00:00:00.000Z
 weight: 20
-summary: A very brief introduction on using the DataFrames package in Julia
+summary: An overview on how to make plots with the Makie framework in Julia
 tags:
   - Julia
   - plotting

@@ -90,4 +90,16 @@ layoutBackgroundHeaderSpace: false
       <p class="text-base !mb-0 !mt-0">Katerina studied activity patterns, habitat use, and the influence of body size in those biological rates in individuals of <i>Timon lepidus</i> using a combination of biologing of individuals in mesocosms, and finally tuned mechanistic (biophysical) models. She used all that information to study the physiology of free-ranging lizards and evaluate the potential impacts of climate change at fine resolution and the individual level.</p>
     </div>
   </div>
+
+  <div class="flex flex-col md:flex-row items-center md:items-start gap-4 mt-6">
+    <img src="helena.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Helena Martínez-Gil" />
+    <div>
+      <h3 class="text-xl font-bold !mb-0 !mt-0">Helena Martínez-Gil</h3>
+      <p class="text-neutral-500 italic !mb-0 !mt-0">Master Student</p>
+      <p class="text-base !mb-0 !mt-0">Helena studied the morphological and climatic niche evolution of true frogs (<i>Rana</i> and <i>Lithobates</i> genera). Using phylogenetic comparative methods she tested for the generality of the so-called ecogeographical rules using a system of "sister parallel radiation". She found contrasting patterns between the two radiations, challenging the view that ecogeographical rules are universal.</p>
+      <div class="flex gap-4">
+        <a href="https://www.mncn.csic.es/es/quienes_somos/martinez-gil-helena" target="_blank" class="text-primary-500 hover:underline">Website</a>
+      </div>
+    </div>
+  </div>
 </div>

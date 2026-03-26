@@ -2,10 +2,10 @@
 title: "Benchmarking future.apply"
 date: 2026-03-25
 weight: 10
-summary: "A very brief introduction on using the DataFrames package in Julia"
+summary: "For loops are vary commonly used for performing tasks in series. However, the apply family of functions and a new framework (future.apply) allow to perform this tasks in parallel, which might be more performant than the classical for-loop in R."
 tags: ["R", "programming", "loops", "parallelization"]
 output: hugodown::md_document
-rmd_hash: c7e926ff014f0802
+rmd_hash: adbcb8ea7021af37
 
 ---
 
@@ -40,11 +40,11 @@ In this scenario, we do something very fast: calculating the mean of 1,000 numbe
 <span><span class='nf'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>bench_cheap</span><span class='o'>)</span>, caption <span class='o'>=</span> <span class='s'>"Cheap Task Results (milliseconds)"</span><span class='o'>)</span></span>
 </code></pre>
 
-| expr           |       min |        lq |       mean |    median |         uq |        max | neval |
-|:------------|--------:|--------:|---------:|--------:|---------:|---------:|-----:|
-| for_loop       |  1608.359 |  1670.975 |  2190.1166 |  1903.875 |   2669.886 |   3709.897 |    10 |
-| standard_apply |   587.176 |   595.874 |   947.8083 |   867.347 |   1267.916 |   1548.279 |    10 |
-| future_apply   | 43543.992 | 46387.785 | 84049.1765 | 99176.992 | 102294.771 | 133827.555 |    10 |
+| expr           |       min |        lq |      mean |     median |         uq |        max | neval |
+|:------------|--------:|--------:|--------:|---------:|---------:|---------:|-----:|
+| for_loop       |  1561.955 |  1641.735 |  1977.428 |  1695.8220 |   1878.798 |   3399.713 |    10 |
+| standard_apply |   579.605 |   582.867 |   852.848 |   602.6825 |    838.682 |   2092.615 |    10 |
+| future_apply   | 41374.150 | 45666.810 | 78277.196 | 85182.7665 | 100218.485 | 126745.649 |    10 |
 
 Cheap Task Results (milliseconds)
 
@@ -98,9 +98,9 @@ In this scenario, we simulate "heavy" work by adding a tiny delay (`Sys.sleep`).
 
 | expr           |       min |        lq |      mean |    median |        uq |       max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop       | 2010.7866 | 2010.7866 | 2014.4950 | 2014.4950 | 2018.2033 | 2018.2033 |     2 |
-| standard_apply | 2008.7650 | 2008.7650 | 2011.7931 | 2011.7931 | 2014.8213 | 2014.8213 |     2 |
-| future_apply   |  279.5349 |  279.5349 |  292.0067 |  292.0067 |  304.4786 |  304.4786 |     2 |
+| for_loop       | 2009.7809 | 2009.7809 | 2009.9488 | 2009.9488 | 2010.1167 | 2010.1167 |     2 |
+| standard_apply | 2008.7005 | 2008.7005 | 2011.9033 | 2011.9033 | 2015.1061 | 2015.1061 |     2 |
+| future_apply   |  294.6049 |  294.6049 |  303.7617 |  303.7617 |  312.9184 |  312.9184 |     2 |
 
 Expensive Task Results (seconds)
 

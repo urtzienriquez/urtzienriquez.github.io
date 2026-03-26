@@ -3,7 +3,9 @@ title: Data analysis in Julia
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-27T00:00:00.000Z
 weight: 30
-summary: A very brief introduction on using the DataFrames package in Julia
+summary: >-
+  This post touches some aspects of exploratory statistical analyses, as well as
+  some basics of hypothesis testing
 tags:
   - Julia
   - data analyses
