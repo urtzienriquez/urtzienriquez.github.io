@@ -1,0 +1,91 @@
+---
+title: Using DataFrames.jl
+author: Urtzi Enriquez-Urzelai
+date: 2026-03-25
+weight: 10
+summary: "A very brief introduction on using the DataFrames package in Julia"
+tags: ["biophysics", "modelling"]
+format: hugo-md
+jupyter: julia-1.11
+---
+
+In this example, I will work with the world population per country dataset, downloaded from the internet. This lesson is based on a youtube video [^1].
+
+## Importing data
+
+```{julia}
+using DataFrames
+using CSV
+
+wp = DataFrame(CSV.File("./world_pop.csv"))
+first(wp, 5)
+```
+
+```{julia}
+describe(wp)
+```
+
+```{julia}
+names(wp)
+```
+
+## Data wrangling
+
+```{julia}
+wp.id = 1:nrow(wp)
+first(wp, 5)
+```
+
+```{julia}
+colnames = [:country, :pop2024, :pop2023, :area, :density, :growth_rate, :world_perc, :world_rank, :id]
+rename!(wp, colnames)
+describe(wp)
+```
+
+```{julia}
+wp_clean = select!(wp, :id, :country, :pop2024, :growth_rate);
+```
+
+Be careful, the bang (`!`) modifies also the original table! Remember that we are **not** making copies, but creating new pointers to the same objects in memory. 
+
+```{julia}
+describe(wp_clean)
+```
+
+```{julia}
+describe(wp)
+```
+
+## Subsetting
+
+It is possible to check whether a string (i.e. country name) or value is present by using the `in` operator.
+
+```{julia}
+"Tanzania" in wp.country
+```
+
+We can get the index where a specific country is by using the `findall()` or `findfirst()` functions.
+
+```{julia}
+# with anonymous functions
+findall(x -> x == "Tanzania", wp.country)
+
+# or using the == function
+findall(==("Tanzania"), wp.country)
+```
+
+And this allows us to subset our dataframe in several ways:
+
+```{julia}
+# using any of the possibles ways with findall() or findfirst()
+wp[findall(==("Tanzania"), wp.country), :]
+```
+
+```{julia}
+# or using broadcasting, similar as R syntax
+wp[wp.country .== "Tanzania", :]
+```
+
+The `wp.country .== "Tanzania"` statement returns a vector of `0`s and `1`s, that is used for selecting the rows.
+
+[^1]: Based on [youtube video](https://www.youtube.com/watch?v=TGFNEwVB9DU&list=PLhQ2JMBcfAsjZTA8_jGhz3BVqYgOeyyeu&index=7)

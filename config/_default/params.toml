@@ -11,7 +11,7 @@ autoSwitchAppearance = false
 
 enableA11y = false
 enableSearch = true
-enableCodeCopy = false
+enableCodeCopy = true
 enableStructuredBreadcrumbs = false
 # enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
 
@@ -106,7 +106,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showLikes = false
   showTableOfContents = false
   showCards = true
-  orderByWeight = false
+  orderByWeight = true
   groupByYear = false
   cardView = true
   cardViewScreenWidth = false

@@ -26,19 +26,37 @@
   weight = 20
 
 [[main]]
-  name = "Collaborators"
-  pageRef = "collaborators"
+  name = "People"
+  pageRef = "people"
   weight = 30
 
 [[main]]
+  parent = "People"
+  name = "Collaborators"
+  pageRef = "collaborators"
+  weight = 1
+
+[[main]]
+  parent = "People"
   name = "Students"
   pageRef = "students"
-  weight = 40
+  weight = 2
 
 [[main]]
   name = "Publications"
   pageRef = "publications"
   weight = 50
+
+[[main]]
+  name = "Programming"
+  pageRef = "programming"
+  weight = 60
+
+[[main]]
+  parent = "Programming"
+  name = "Julia"
+  pageRef = "programming/julia"
+  weight = 1
 
 #[[main]]
 #  name = "Parent"
