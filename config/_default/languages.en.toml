@@ -19,11 +19,11 @@ title = "Urtzi Enriquez-Urzelai"
   email = "uenriquez@proton.me"
   image = "img/picture.jpg"
   imageQuality = 96
-  headline = "Physiology, ecology and modeling in a changing world"
+  # headline = "Physiology, ecology and modeling in a changing world"
   bio = "Physiological and evolutionary ecologist"
   links = [
     { email = "mailto:uenriquez@proton.me" },
-    { google = "https://scholar.google.com/citations?user=4fPSob0AAAAJ&hl=en" },
+    { google-scholar = "https://scholar.google.com/citations?user=4fPSob0AAAAJ&hl=en" },
     { orcid = "https://orcid.org/0000-0001-5958-2250" },
     { researchgate = "https://www.researchgate.net/profile/Urtzi-Enriquez-Urzelai" },
     { github = "https://github.com/urtzienriquez" },
