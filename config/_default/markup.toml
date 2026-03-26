@@ -19,7 +19,9 @@
         inline = [['\(', '\)']]
 
 [highlight]
-  noClasses = false
+  noClasses = false  # Ensures classes like .chroma are used
+  codeFences = true
+  guessSyntax = true
 
 [tableOfContents]
   startLevel = 2

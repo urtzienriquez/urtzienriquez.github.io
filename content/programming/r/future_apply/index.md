@@ -1,13 +1,21 @@
 ---
-title: "Benchmarking future.apply"
-date: 2026-03-25
+title: Benchmarking future.apply
+author: Urtzi Enriquez-Urzelai
+date: 2026-03-25T00:00:00.000Z
 weight: 10
-summary: "For loops are vary commonly used for performing tasks in series. However, the apply family of functions and a new framework (future.apply) allow to perform this tasks in parallel, which might be more performant than the classical for-loop in R."
-tags: ["R", "programming", "loops", "parallelization"]
-output: hugodown::md_document
-rmd_hash: adbcb8ea7021af37
-
+summary: >-
+  For loops are very commonly used for performing tasks in series. However, the
+  apply family of functions and a new framework (future.apply) allow to perform
+  this tasks in parallel, which might be more performant than the classical
+  for-loop in R.
+tags:
+  - R
+  - programming
+  - loops
+  - parallelization
+format: hugo-md
 ---
+
 
 ## The Three Contenders
 
@@ -21,49 +29,39 @@ rmd_hash: adbcb8ea7021af37
 
 In this scenario, we do something very fast: calculating the mean of 1,000 numbers.
 
-<div class="highlight">
+``` r
+n <- 200
+data_list <- replicate(n, rnorm(1000), simplify = FALSE)
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>n</span> <span class='o'>&lt;-</span> <span class='m'>200</span></span>
-<span><span class='nv'>data_list</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/lapply.html'>replicate</a></span><span class='o'>(</span><span class='nv'>n</span>, <span class='nf'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='o'>(</span><span class='m'>1000</span><span class='o'>)</span>, simplify <span class='o'>=</span> <span class='kc'>FALSE</span><span class='o'>)</span></span>
-<span></span>
-<span><span class='nv'>bench_cheap</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/pkg/microbenchmark/man/microbenchmark.html'>microbenchmark</a></span><span class='o'>(</span></span>
-<span>  for_loop <span class='o'>=</span> <span class='o'>&#123;</span></span>
-<span>    <span class='nv'>res_for</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/vector.html'>vector</a></span><span class='o'>(</span><span class='s'>"list"</span>, <span class='nv'>n</span><span class='o'>)</span></span>
-<span>    <span class='kr'>for</span><span class='o'>(</span><span class='nv'>i</span> <span class='kr'>in</span> <span class='m'>1</span><span class='o'>:</span><span class='nv'>n</span><span class='o'>)</span> <span class='nv'>res_for</span><span class='o'>[[</span><span class='nv'>i</span><span class='o'>]</span><span class='o'>]</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='o'>(</span><span class='nv'>data_list</span><span class='o'>[[</span><span class='nv'>i</span><span class='o'>]</span><span class='o'>]</span><span class='o'>)</span></span>
-<span>  <span class='o'>&#125;</span>,</span>
-<span>  standard_apply <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='o'>(</span><span class='nv'>data_list</span>, <span class='nv'>mean</span><span class='o'>)</span>,</span>
-<span>  future_apply   <span class='o'>=</span> <span class='nf'><a href='https://future.apply.futureverse.org/reference/future_lapply.html'>future_lapply</a></span><span class='o'>(</span><span class='nv'>data_list</span>, <span class='nv'>mean</span><span class='o'>)</span>,</span>
-<span>  times <span class='o'>=</span> <span class='m'>10</span></span>
-<span><span class='o'>)</span></span>
-<span></span>
-<span><span class='c'># Generate Table</span></span>
-<span><span class='nf'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>bench_cheap</span><span class='o'>)</span>, caption <span class='o'>=</span> <span class='s'>"Cheap Task Results (milliseconds)"</span><span class='o'>)</span></span>
-</code></pre>
+bench_cheap <- microbenchmark(
+  for_loop = {
+    res_for <- vector("list", n)
+    for (i in 1:n) res_for[[i]] <- mean(data_list[[i]])
+  },
+  standard_apply = lapply(data_list, mean),
+  future_apply = future_lapply(data_list, mean),
+  times = 10
+)
 
-| expr           |       min |        lq |      mean |     median |         uq |        max | neval |
-|:------------|--------:|--------:|--------:|---------:|---------:|---------:|-----:|
-| for_loop       |  1561.955 |  1641.735 |  1977.428 |  1695.8220 |   1878.798 |   3399.713 |    10 |
-| standard_apply |   579.605 |   582.867 |   852.848 |   602.6825 |    838.682 |   2092.615 |    10 |
-| future_apply   | 41374.150 | 45666.810 | 78277.196 | 85182.7665 | 100218.485 | 126745.649 |    10 |
+# Generate Table
+kable(summary(bench_cheap), caption = "Cheap Task Results (milliseconds)")
+```
+
+| expr | min | lq | mean | median | uq | max | neval |
+|:------------|--------:|--------:|---------:|--------:|--------:|---------:|-----:|
+| for_loop | 1561.415 | 1643.008 | 1983.6259 | 1832.492 | 1974.361 | 3412.406 | 10 |
+| standard_apply | 577.609 | 593.539 | 937.5296 | 618.107 | 1063.366 | 2691.602 | 10 |
+| future_apply | 43168.213 | 44835.276 | 65135.7504 | 49240.382 | 78636.249 | 125024.330 | 10 |
 
 Cheap Task Results (milliseconds)
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span></span>
-<span><span class='c'># Generate Figure</span></span>
-<span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/autoplot.html'>autoplot</a></span><span class='o'>(</span><span class='nv'>bench_cheap</span><span class='o'>)</span> <span class='o'>+</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='o'>(</span>title <span class='o'>=</span> <span class='s'>"Cheap Task: Parallel Overhead is Visible"</span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; Warning: `aes_string()` was deprecated in ggplot2 3.0.0.</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Please use tidy evaluation idioms with `aes()`.</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> See also `vignette("ggplot2-in-packages")` for more information.</span></span>
-<span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> The deprecated feature was likely used in the <span style='color: #0000BB;'>microbenchmark</span> package.</span></span>
-<span><span class='c'>#&gt;   Please report the issue at</span></span>
-<span><span class='c'>#&gt;   <span style='color: #0000BB; font-style: italic;'>&lt;https://github.com/joshuaulrich/microbenchmark/issues/&gt;</span>.</span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>This warning is displayed once per session.</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>Call `lifecycle::last_lifecycle_warnings()` to see where this warning was</span></span></span>
-<span><span class='c'>#&gt; <span style='color: #555555;'>generated.</span></span></span>
-<span></span></code></pre>
-<img src="figs/cheap_benchmark-1.png" alt="" width="700px" style="display: block; margin: auto;" />
+``` r
+# Generate Figure
+autoplot(bench_cheap) +
+  labs(title = "Cheap Task: Parallel Overhead is Visible")
+```
 
-</div>
+<img src="index.markdown_strict_files/figure-markdown_strict/cheap_benchmark-1.png" width="768" />
 
 ------------------------------------------------------------------------
 
@@ -71,44 +69,45 @@ Cheap Task Results (milliseconds)
 
 In this scenario, we simulate "heavy" work by adding a tiny delay (`Sys.sleep`). This mimics complex statistical modeling or web scraping.
 
-<div class="highlight">
+``` r
+n_heavy <- 20
+data_heavy <- replicate(n_heavy, rnorm(10), simplify = FALSE)
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>n_heavy</span> <span class='o'>&lt;-</span> <span class='m'>20</span></span>
-<span><span class='nv'>data_heavy</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/lapply.html'>replicate</a></span><span class='o'>(</span><span class='nv'>n_heavy</span>, <span class='nf'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='o'>(</span><span class='m'>10</span><span class='o'>)</span>, simplify <span class='o'>=</span> <span class='kc'>FALSE</span><span class='o'>)</span></span>
-<span></span>
-<span><span class='c'># A function that takes 0.1 seconds per call</span></span>
-<span><span class='nv'>heavy_func</span> <span class='o'>&lt;-</span> <span class='kr'>function</span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>  <span class='nf'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='o'>(</span><span class='m'>0.1</span><span class='o'>)</span></span>
-<span>  <span class='nf'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span></span>
-<span><span class='o'>&#125;</span></span>
-<span></span>
-<span><span class='nv'>bench_expensive</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/pkg/microbenchmark/man/microbenchmark.html'>microbenchmark</a></span><span class='o'>(</span></span>
-<span>  for_loop <span class='o'>=</span> <span class='o'>&#123;</span></span>
-<span>    <span class='nv'>res_for</span> <span class='o'>&lt;-</span> <span class='nf'><a href='https://rdrr.io/r/base/vector.html'>vector</a></span><span class='o'>(</span><span class='s'>"list"</span>, <span class='nv'>n_heavy</span><span class='o'>)</span></span>
-<span>    <span class='kr'>for</span><span class='o'>(</span><span class='nv'>i</span> <span class='kr'>in</span> <span class='m'>1</span><span class='o'>:</span><span class='nv'>n_heavy</span><span class='o'>)</span> <span class='nv'>res_for</span><span class='o'>[[</span><span class='nv'>i</span><span class='o'>]</span><span class='o'>]</span> <span class='o'>&lt;-</span> <span class='nf'>heavy_func</span><span class='o'>(</span><span class='nv'>data_heavy</span><span class='o'>[[</span><span class='nv'>i</span><span class='o'>]</span><span class='o'>]</span><span class='o'>)</span></span>
-<span>  <span class='o'>&#125;</span>,</span>
-<span>  standard_apply <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='o'>(</span><span class='nv'>data_heavy</span>, <span class='nv'>heavy_func</span><span class='o'>)</span>,</span>
-<span>  future_apply   <span class='o'>=</span> <span class='nf'><a href='https://future.apply.futureverse.org/reference/future_lapply.html'>future_lapply</a></span><span class='o'>(</span><span class='nv'>data_heavy</span>, <span class='nv'>heavy_func</span><span class='o'>)</span>,</span>
-<span>  times <span class='o'>=</span> <span class='m'>2</span> <span class='c'># Low iterations because it's slow!</span></span>
-<span><span class='o'>)</span></span>
-<span></span>
-<span><span class='c'># Generate Table</span></span>
-<span><span class='nf'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='o'>(</span><span class='nf'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='o'>(</span><span class='nv'>bench_expensive</span><span class='o'>)</span>, caption <span class='o'>=</span> <span class='s'>"Expensive Task Results (seconds)"</span><span class='o'>)</span></span>
-</code></pre>
+# A function that takes 0.1 seconds per call
 
-| expr           |       min |        lq |      mean |    median |        uq |       max | neval |
+heavy_func <- function(x) {
+  Sys.sleep(0.1)
+  mean(x)
+}
+
+bench_expensive <- microbenchmark(
+  for_loop = {
+    res_for <- vector("list", n_heavy)
+    for (i in 1:n_heavy) res_for[[i]] <- heavy_func(data_heavy[[i]])
+  },
+  standard_apply = lapply(data_heavy, heavy_func),
+  future_apply = future_lapply(data_heavy, heavy_func),
+  times = 2 # Low iterations because it's slow!
+)
+
+# Generate Table
+
+kable(summary(bench_expensive), caption = "Expensive Task Results (seconds)")
+```
+
+| expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop       | 2009.7809 | 2009.7809 | 2009.9488 | 2009.9488 | 2010.1167 | 2010.1167 |     2 |
-| standard_apply | 2008.7005 | 2008.7005 | 2011.9033 | 2011.9033 | 2015.1061 | 2015.1061 |     2 |
-| future_apply   |  294.6049 |  294.6049 |  303.7617 |  303.7617 |  312.9184 |  312.9184 |     2 |
+| for_loop | 2010.2332 | 2010.2332 | 2013.0622 | 2013.0622 | 2015.8912 | 2015.8912 | 2 |
+| standard_apply | 2009.6175 | 2009.6175 | 2012.0894 | 2012.0894 | 2014.5613 | 2014.5613 | 2 |
+| future_apply | 290.4095 | 290.4095 | 294.4984 | 294.4984 | 298.5872 | 298.5872 | 2 |
 
 Expensive Task Results (seconds)
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span></span>
-<span><span class='c'># Generate Figure</span></span>
-<span><span class='nf'><a href='https://ggplot2.tidyverse.org/reference/autoplot.html'>autoplot</a></span><span class='o'>(</span><span class='nv'>bench_expensive</span><span class='o'>)</span> <span class='o'>+</span> <span class='nf'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='o'>(</span>title <span class='o'>=</span> <span class='s'>"Expensive Task: Future Wins Big"</span><span class='o'>)</span></span>
-</code></pre>
-<img src="figs/expensive_benchmark-1.png" alt="" width="700px" style="display: block; margin: auto;" />
+``` r
+# Generate Figure
 
-</div>
+autoplot(bench_expensive) +
+  labs(title = "Expensive Task: Future Wins Big")
+```
 
+<img src="index.markdown_strict_files/figure-markdown_strict/expensive_benchmark-1.png" width="768" />

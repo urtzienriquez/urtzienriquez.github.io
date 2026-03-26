@@ -1,13 +1,16 @@
 ---
-title: "Benchmarking future.apply"
+title: 'Benchmarking future.apply'
+author: 'Urtzi Enriquez-Urzelai'
 date: 2026-03-25
 weight: 10
-summary: "For loops are vary commonly used for performing tasks in series. However, the apply family of functions and a new framework (future.apply) allow to perform this tasks in parallel, which might be more performant than the classical for-loop in R."
-tags: ["R", "programming", "loops", "parallelization"]
-output: hugodown::md_document
+summary: 'For loops are very commonly used for performing tasks in series. However, the apply family of functions and a new framework (future.apply) allow to perform this tasks in parallel, which might be more performant than the classical for-loop in R.'
+tags: ['R', 'programming', 'loops', 'parallelization']
+format: hugo-md
 ---
 
-```{r setup, include=FALSE}
+```{r}
+#| label: setup
+#| include: false
 library(future.apply)
 library(microbenchmark)
 library(ggplot2)
@@ -18,6 +21,7 @@ plan(multisession, workers = parallel::detectCores() - 1)
 ```
 
 ## The Three Contenders
+
 1. **Standard `for` loop**: Manual iteration (pre-allocated).
 2. **`lapply`**: The functional, sequential R standard.
 3. **`future_lapply`**: The parallelized version.
@@ -25,19 +29,23 @@ plan(multisession, workers = parallel::detectCores() - 1)
 ---
 
 ## Experiment 1: The "Cheap" Task
-In this scenario, we do something very fast: calculating the mean of 1,000 numbers. 
 
-```{r cheap_benchmark}
+In this scenario, we do something very fast: calculating the mean of 1,000 numbers.
+
+```{r}
+#| label: cheap_benchmark
+#| warning: false
+
 n <- 200
 data_list <- replicate(n, rnorm(1000), simplify = FALSE)
 
 bench_cheap <- microbenchmark(
   for_loop = {
     res_for <- vector("list", n)
-    for(i in 1:n) res_for[[i]] <- mean(data_list[[i]])
+    for (i in 1:n) res_for[[i]] <- mean(data_list[[i]])
   },
   standard_apply = lapply(data_list, mean),
-  future_apply   = future_lapply(data_list, mean),
+  future_apply = future_lapply(data_list, mean),
   times = 10
 )
 
@@ -45,19 +53,25 @@ bench_cheap <- microbenchmark(
 kable(summary(bench_cheap), caption = "Cheap Task Results (milliseconds)")
 
 # Generate Figure
-autoplot(bench_cheap) + labs(title = "Cheap Task: Parallel Overhead is Visible")
+autoplot(bench_cheap) +
+  labs(title = "Cheap Task: Parallel Overhead is Visible")
 ```
 
 ---
 
 ## Experiment 2: The "Expensive" Task
+
 In this scenario, we simulate "heavy" work by adding a tiny delay (`Sys.sleep`). This mimics complex statistical modeling or web scraping.
 
-```{r expensive_benchmark}
+```{r}
+#| label: expensive_benchmark
+#| warning: false
+
 n_heavy <- 20
 data_heavy <- replicate(n_heavy, rnorm(10), simplify = FALSE)
 
 # A function that takes 0.1 seconds per call
+
 heavy_func <- function(x) {
   Sys.sleep(0.1)
   mean(x)
@@ -66,16 +80,19 @@ heavy_func <- function(x) {
 bench_expensive <- microbenchmark(
   for_loop = {
     res_for <- vector("list", n_heavy)
-    for(i in 1:n_heavy) res_for[[i]] <- heavy_func(data_heavy[[i]])
+    for (i in 1:n_heavy) res_for[[i]] <- heavy_func(data_heavy[[i]])
   },
   standard_apply = lapply(data_heavy, heavy_func),
-  future_apply   = future_lapply(data_heavy, heavy_func),
+  future_apply = future_lapply(data_heavy, heavy_func),
   times = 2 # Low iterations because it's slow!
 )
 
 # Generate Table
+
 kable(summary(bench_expensive), caption = "Expensive Task Results (seconds)")
 
 # Generate Figure
-autoplot(bench_expensive) + labs(title = "Expensive Task: Future Wins Big")
+
+autoplot(bench_expensive) +
+  labs(title = "Expensive Task: Future Wins Big")
 ```
