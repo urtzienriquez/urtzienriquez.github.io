@@ -1,0 +1,94 @@
+---
+title: Uso de DataFrames.jl
+author: Urtzi Enriquez-Urzelai
+date: 2026-03-25
+weight: 10
+summary: "Una breve introducción al uso del paquete DataFrames en Julia"
+tags: ["Julia", "dataframes", "análisis de datos"]
+format: hugo-md
+jupyter: julia-1.11
+---
+
+En este ejemplo, trabajaré con un conjunto de datos de la población mundial por país, descargado de internet. Esta lección está basada en un vídeo de YouTube [^1].
+
+## Importación de datos
+
+```{julia}
+using DataFrames
+using CSV
+
+wp = DataFrame(CSV.File("./world_pop.csv"))
+first(wp, 5)
+```
+
+```{julia}
+describe(wp)
+```
+
+```{julia}
+names(wp)
+```
+
+## Manipulación de datos (Data wrangling)
+Code snippet
+
+```{julia}
+wp.id = 1:nrow(wp)
+first(wp, 5)
+```
+
+```{julia}
+colnames = [:country, :pop2024, :pop2023, :area, :density, :growth_rate, :world_perc, :world_rank, :id]
+rename!(wp, colnames)
+describe(wp)
+```
+
+```{julia}
+wp_clean = select!(wp, :id, :country, :pop2024, :growth_rate);
+```
+
+¡Ten cuidado! El signo de exclamación (!) modifica también la tabla original. Recuerda que no estamos haciendo copias, sino creando nuevos punteros a los mismos objetos en memoria.
+
+```{julia}
+describe(wp_clean)
+```
+
+```{julia}
+describe(wp)
+```
+
+## Subconjuntos (Subsetting)
+
+Es posible comprobar si una cadena (p. ej., el nombre de un país) o un valor está presente utilizando el operador in.
+
+```{julia}
+"Tanzania" in wp.country
+```
+
+Podemos obtener el índice donde se encuentra un país específico utilizando las funciones findall() o findfirst().
+
+```{julia}
+# con funciones anónimas
+findall(x -> x == "Tanzania", wp.country)
+```
+
+```{julia}
+# o utilizando la función ==
+findall(==("Tanzania"), wp.country)
+```
+
+Y esto nos permite extraer subconjuntos de nuestro dataframe de varias formas:
+
+```{julia}
+# usando cualquiera de las formas posibles con findall() o findfirst()
+wp[findall(==("Tanzania"), wp.country), :]
+```
+
+```{julia}
+# o usando broadcasting, de forma similar a la sintaxis de R
+wp[wp.country .== "Tanzania", :]
+```
+
+La sentencia wp.country .== "Tanzania" devuelve un vector de 0s y 1s, que se utiliza para seleccionar las filas.
+
+[^1]: Basado en [video de youtube](https://www.youtube.com/watch?v=TGFNEwVB9DU&list=PLhQ2JMBcfAsjZTA8_jGhz3BVqYgOeyyeu&index=7)

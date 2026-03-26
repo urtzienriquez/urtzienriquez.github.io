@@ -1,0 +1,119 @@
+---
+title: Análisis de datos en Julia
+author: Urtzi Enriquez-Urzelai
+date: 2025-03-27
+weight: 30
+summary: "Esta publicación aborda algunos aspectos de los análisis estadísticos exploratorios, así como algunos conceptos básicos del contraste de hipótesis"
+tags: ["Julia", "análisis de datos", "estadística"]
+format: hugo-md
+jupyter: julia-1.11
+---
+
+## Importación de datos
+
+En este primer ejemplo, importaremos los datos de Iris que descargué para otro curso (un curso de *git*). Para ello solo necesitamos hacer lo siguiente:
+
+```{julia}
+using DataFrames, DataFramesMeta
+using RDatasets
+using CategoricalArrays
+
+iris = dataset("datasets", "iris")
+#=iris[!, :Species] = categorical(iris[!, :Species])=#
+first(iris, 5)
+```
+
+## Gráficos básicos
+
+Un simple diagrama de caja (boxplot) que muestra la longitud del sépalo por especie:
+
+```{julia}
+using StatsPlots: boxplot
+boxplot(iris.Species, iris.SepalLength)
+```
+
+```{julia}
+using CairoMakie
+fig, ax, plot = scatter(iris.PetalLength, iris.SepalLength, 
+                        color=levelcode.(iris.Species))
+ax2 = Axis(fig[1,2])
+scatter!(ax2, iris.PetalLength, iris.PetalWidth,
+         color = levelcode.(iris.Species))
+fig
+```
+
+## Análisis de Componentes Principales (PCA)
+
+```{julia}
+using MultivariateStats
+X = Matrix(iris[:, Not(:Species)])'
+y = iris.Species
+species = unique(iris.Species)
+
+model = fit(PCA, X; maxoutdim = size(X)[1])
+```
+
+```{julia}
+X_transform = MultivariateStats.transform(model, X)'
+X_df = DataFrame(Matrix(X_transform), :auto)
+rename!(X_df, :x1 => :PC1, :x2 => :PC2, :x3 => :PC3)
+X_df.Species = iris.Species;
+```
+
+```{julia}
+fig_pca = Figure();
+ax_pca = Axis(fig_pca[1, 1],
+              xlabel = "PC1",
+              ylabel = "PC2")
+@with X_df begin
+    scatter!(ax_pca, :PC1, :PC2, 
+             color = levelcode.(:Species),
+             label = levelcode.(:Species))
+end
+fig_pca
+```
+
+## Inferencia básica: ANOVA en un modelo lineal
+
+```{julia}
+using AnovaGLM
+aovlm = anova_lm(@formula(SepalLength ~ PetalLength * Species), iris)
+```
+
+## Añadiendo las líneas de regresión
+```{julia}
+using ColorSchemes
+import ColorSchemes.viridis
+
+lmmod = lm(@formula(SepalLength ~ PetalLength), iris)
+lmmod_gp = lm(@formula(SepalLength ~ PetalLength * Species), iris)
+gp_mod_coef = coef(lmmod_gp)
+
+fig = Figure()
+ax = Axis(fig[1, 1],
+          xlabel = "Longitud del pétalo (Petal Length)",
+          ylabel = "Anchura del pétalo (Petal Width)")
+scatter!(iris.PetalLength, iris.SepalLength, 
+         color=levelcode.(iris.Species));
+lines!(ax, 
+       iris.PetalLength, 
+       predict(lmmod), 
+       linewidth = 2,
+       color = :black)
+ablines!(gp_mod_coef[1],
+       gp_mod_coef[2],
+       linewidth = 2,
+       linestyle = :dash,
+         color = viridis[0.0])
+ablines!(gp_mod_coef[1] + gp_mod_coef[3],
+       gp_mod_coef[2] + gp_mod_coef[5],
+       linewidth = 2,
+       linestyle = :dash,
+         color = viridis[0.5])
+ablines!(gp_mod_coef[1] + gp_mod_coef[4],
+       gp_mod_coef[2] + gp_mod_coef[6],
+       linewidth = 2,
+       linestyle = :dash,
+         color = viridis[1.0])
+fig
+```

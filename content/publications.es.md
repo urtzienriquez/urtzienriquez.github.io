@@ -1,0 +1,95 @@
+---
+title: ''
+date: 2026-03-25
+layout: 'single'
+showAuthor: false
+heroStyle: "background"
+showHero: true
+showDate : false
+showDateOnlyInArticle : false
+showDateUpdated : false
+showHeadingAnchors : false
+showPagination : false
+showReadingTime : false
+showTableOfContents : true
+showTaxonomies : false 
+showWordCount : false
+showSummary : false
+sharingLinks : false
+showEdit: false
+showViews: false
+showLikes: false
+layoutBackgroundHeaderSpace: false
+---
+
+### 2026
+
+Puig, C. R., Kaliontzopoulou, A., Sillero, N., & **Enriquez-Urzelai, U.** (2026). Physiology–microhabitat matching may help organisms cope with the thermal and hydric challenges under climate change: a tale of two lizards. Ecography, e08337. <a href="https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1002/ecog.08337" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2025
+
+Martínez‐Gil, H., Kaliontzopoulou, A., & **Enriquez‐Urzelai, U.** (2025). Different Macroevolutionary Trajectories Lead to Contrasting Ecogeographical Patterns in Two Widespread Frog Radiations. _Global Ecology and Biogeography_, **34(8)**, e70109. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/geb.70109" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Reyes‐Puig, C., **Enriquez‐Urzelai, U.**, Sillero, N., & Kaliontzopoulou, A. (2025). Niche Differences in Coexisting Species: Ecological Insights Into the Role of Activity Patterns, Space Use, and Environmental Preferences. _Ecology and Evolution_, **15(8)**, e71802. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.71802" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Vicent-Castelló, P., **Enriquez-Urzelai, U.**, Martínez-Freíria, F., Garcia-Porta, J., & Kaliontzopoulou, A. (2025). Context-dependent body size evolution in lacertid lizards: differential role of structural habitat and climate across radiations. _Evolution_, **79(10)**, 2023-2034. <a href="https://academic.oup.com/evolut/article-abstract/79/10/2023/8162763" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Pintanel, P., Tejedo, M., **Enriquez‐Urzelai, U.**, Domínguez‐Guerrero, S. F., & Muñoz, M. M. (2025). High thermal variation in maximum temperatures invert Brett's heat‐invariant rule at fine spatial scales. _Ecology_, **106(6)**, e70124. <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecy.70124" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Dajčman, U., **Enriquez‐Urzelai, U.**, & Žagar, A. (2025). Microclimate variability impacts the coexistence of highland and lowland ectotherms. _Journal of Animal Ecology_, **94(5)**, 999-1013. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.70030" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2024
+
+Wu, N. C., Bovo, R. P., **Enriquez-Urzelai, U.**, Clusella-Trullas, S., Kearney, M. R., Navas, C. A., & Kong, J. D. (2024). Global exposure risk of frogs to increasing environmental dryness. _Nature Climate Change_, **14 (12)**, 1314-1322. <a href="https://www.nature.com/articles/s41558-024-02167-z" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+**Enriquez-Urzelai, U.**, & Gvoždík, L. (2024). Impacts of behaviour and acclimation of metabolic rate on energetics in sheltered ectotherms: a climate change perspective. _Proceedings of the Royal Society B_, **291(2017)**, 20232152. <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rspb.2023.2152" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Reyes‐Puig, C., **Enriquez‐Urzelai, U.**, Carretero, M. A., & Kaliontzopoulou, A. (2024). Is it all about size? Dismantling the integrated phenotype to understand species coexistence and niche segregation. _Functional Ecology_, **38 (11)**, 2350-2368. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2435.14646" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Pintanel, P., Tejedo, M., Camacho, A., **Enriquez‐Urzelai, U.**, Llorente, G. A., & Merino‐Viteri, A. (2024). Physiological thermal niches, elevational ranges and thermal stress in dendrobatid frogs: An integrated approach. _Journal of Biogeography_, **51 (10)**, 1880-1893. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.14860" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2023
+
+Reyes-Puig, C., Adams, D.C., **Enriquez-Urzelai, U.**, and Kaliontzopoulou, A. Rensch’s Rule: linking intraspecific to evolutionary allometry (2023). _Evolution_, **77**, 2576-2589. <a href="https://academic.oup.com/evolut/article-abstract/77/12/2576/7280287" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Kearney, M.R. and **Enriquez-Urzelai, U.** (2023). A general framework for jointly modelling thermal and hydric constraints on developing eggs. _Methods in Ecology and Evolution_ **14**, 583-595. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14018" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2022
+
+**Enriquez-Urzelai, U.**, Martínez-Freiría, F., Freitas, I., Perera, A., Martínez-Solano, Í., Salvi, D., Velo-Antón, G., and Kaliontzopoulou, A. (2022). Allopatric speciation, niche conservatism and gradual phenotypic change in the evolution of European green lizards. _Journal of Biogeography_ **49**, 2193-2205. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.14497" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Gutiérrez-Pesquera, L.M., Tejedo, M., Camacho, A., **Enriquez-Urzelai, U.**, Katzenberger, M., Choda, M., Pintanel, P., and Nicieza, A.G. (2022). Phenology and plasticity can prevent adaptive clines in thermal tolerance across temperate mountains: the importance of the elevation-time axis. _Ecology and Evolution_ **12**, e9349. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.9349" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+**Enriquez-Urzelai, U.** and Boratyński, Z. (2022). Energetic dissociation of individual and species ranges. _Biology Letters_ **18**, 20210374. <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsbl.2021.0374" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+**Enriquez-Urzelai, U.**, Nicieza, A. G., Montori, A., Llorente, G. A., and Urrutia, M. B. (2022). Physiology and acclimation potential are tuned with phenology in larvae of a prolonged breeder amphibian. _Oikos_ **2022**, e08566. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/oik.08566" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+Martínez-Gil, H., Martínez-Freiría, F., Perera, A., **Enriquez-Urzelai, U.**, Martínez-Solano, Í., Velo-Antón, G., and Kaliontzopoulou, A. (2022). Morphological diversification of Mediterranean anurans: the roles of evolutionary history and climate. _Biological Journal of the Linnean Society_ **135**, 462–477. <a href="https://academic.oup.com/biolinnean/article-abstract/135/3/462/6486822?login=false" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2021
+
+Sillero, N., Arenas-Castro, S., **Enriquez-Urzelai, U.**, Vale, C. G., Sousa-Guedes, D., Martínez-Freiría, F., Real, R., and Barbosa, A. M. (2021). Want to model a species niche? A step-by-step guideline on correlative ecological niche modelling. _Ecological Modelling_ **456**, 109671. <a href="https://www.sciencedirect.com/science/article/pii/S0304380021002301" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2020
+
+**Enriquez-Urzelai, U.**, Tingley, R., Kearney, M. R., Sacco, M., Palacio, A. S., Tejedo, M., and Nicieza, A. G. (2020). The roles of acclimation and behaviour in buffering climate change impacts along elevational gradients. _Journal of Animal Ecology_ **89**, 1722–1734. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.13222" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2019
+
+**Enriquez-Urzelai, U.**, Bernardo, N., Moreno-Rueda, G., Montori, A., and Llorente, G. (2019). Are amphibians tracking their climatic niches in response to climate warming? A test with Iberian amphibians. _Climatic Change_ **154**, 289–301. <a href="https://link.springer.com/article/10.1007/s10584-019-02422-9" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+**Enriquez-Urzelai, U.**, Kearney, M. R., Nicieza, A. G., and Tingley, R. (2019). Integrating mechanistic and correlative niche models to unravel range-limiting processes in a temperate amphibian. _Global Change Biology_ **25**, 2633–2647. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14673" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+**Enriquez-Urzelai, U.**, Sacco, M., Palacio, A. S., Pintanel, P., Tejedo, M., and Nicieza, A. G. (2019). Ontogenetic reduction in thermal tolerance is not alleviated by earlier developmental acclimation in _Rana temporaria_. _Oecologia_ **189**, 385–394. <a href="https://link.springer.com/article/10.1007/s00442-019-04342-y" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2018
+
+**Enriquez-Urzelai, U.**, Palacio, A. S., Merino, N. M., Sacco, M., and Nicieza, A. G. (2018). Hindered and constrained: limited potential for thermal adaptation in post-metamorphic and adult _Rana temporaria_ along elevational gradients. _Journal of evolutionary biology_ **31**, 1852–1862. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jeb.13380" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2015
+
+**Enriquez-Urzelai, U.**, Montori, A., Llorente, G. A., and Kaliontzopoulou, A. (2015). Locomotor mode and the evolution of the hindlimb in western Mediterranean anurans. _Evolutionary Biology_ **42**, 199–209. <a href="https://link.springer.com/article/10.1007/s11692-015-9311-1" target="_blank" class="text-primary-500 hover:underline">link</a>
+
+### 2013
+
+**Enriquez-Urzelai, U.**, San Sebastián, O., Garriga, N., and Llorente, G. A. (2013). Food availability determines the response to pond desiccation in anuran tadpoles. _Oecologia_ **173**, 117–127. <a href="https://link.springer.com/article/10.1007/s00442-013-2596-9" target="_blank" class="text-primary-500 hover:underline">link</a>

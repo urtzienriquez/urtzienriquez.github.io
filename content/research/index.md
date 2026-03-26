@@ -29,7 +29,7 @@ I seek to explain why species live where they do by integrating micro- and macro
 ### Macroevolution of Phenotypes and Ranges
 
 <figure style="width: 100%; margin: 0;">
-  <img src="macroevo.jpg" style="width: 100%;" alt="Detailed description of the macroevolution plot">
+  <img src="/research/macroevo.jpg" style="width: 100%;" alt="Detailed description of the macroevolution plot">
   <figcaption style="text-align: center;">
     Figure 1: Evolution of climatic niches in <i>Rana</i> frogs over deep time. Author: Helena Martínez-Gil
   </figcaption>
