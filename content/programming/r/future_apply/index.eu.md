@@ -14,9 +14,9 @@ summary: >-
   eraginkorragoa izan daiteke R-n.
 tags:
   - R
-  - programazioa
-  - begiztak
-  - paralelizazioa
+  - programming
+  - loops
+  - parallelization
 format: hugo-md
 ---
 
@@ -52,10 +52,10 @@ kable(summary(bench_cheap), caption = "Zeregin merkearen emaitzak (milisegundoak
 ```
 
 | expr | min | lq | mean | median | uq | max | neval |
-|:------------|--------:|--------:|--------:|--------:|--------:|---------:|-----:|
-| for_loop | 1626.834 | 1680.241 | 1772.718 | 1740.202 | 1815.745 | 2008.491 | 10 |
-| standard_apply | 576.123 | 589.844 | 1079.011 | 619.582 | 1546.017 | 2448.915 | 10 |
-| future_apply | 42978.283 | 44313.255 | 68627.230 | 70632.849 | 78685.548 | 117420.592 | 10 |
+|:------------|--------:|--------:|---------:|--------:|--------:|---------:|-----:|
+| for_loop | 1527.265 | 1634.641 | 1779.7843 | 1744.709 | 1914.875 | 2065.791 | 10 |
+| standard_apply | 596.950 | 601.254 | 729.8006 | 632.197 | 803.007 | 1238.508 | 10 |
+| future_apply | 43311.720 | 45430.723 | 68898.6957 | 60474.312 | 76580.966 | 132509.011 | 10 |
 
 Zeregin merkearen emaitzak (milisegundoak)
 
@@ -99,9 +99,9 @@ kable(summary(bench_expensive), caption = "Zeregin garestiaren emaitzak (segundo
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2009.2834 | 2009.2834 | 2012.1795 | 2012.1795 | 2015.0756 | 2015.0756 | 2 |
-| standard_apply | 2008.4217 | 2008.4217 | 2010.7083 | 2010.7083 | 2012.9950 | 2012.9950 | 2 |
-| future_apply | 293.2761 | 293.2761 | 296.5502 | 296.5502 | 299.8244 | 299.8244 | 2 |
+| for_loop | 2010.4344 | 2010.4344 | 2012.9175 | 2012.9175 | 2015.4007 | 2015.4007 | 2 |
+| standard_apply | 2007.5907 | 2007.5907 | 2008.0775 | 2008.0775 | 2008.5644 | 2008.5644 | 2 |
+| future_apply | 296.7501 | 296.7501 | 298.9791 | 298.9791 | 301.2081 | 301.2081 | 2 |
 
 Zeregin garestiaren emaitzak (segundoak)
 

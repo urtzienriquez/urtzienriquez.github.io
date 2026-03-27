@@ -7,7 +7,7 @@ series: ["Julia Tutorialak"]
 series_order: 3
 showPagination: false
 summary: "Sarrera honek estatistika esploratzailearen alderdi batzuk eta hipotesi-kontrastearen oinarriak lantzen ditu"
-tags: ["Julia", "datu-analisia", "estatistika"]
+tags: ["Julia", "data analyses", "statistics"]
 format: hugo-md
 jupyter: julia-1.11
 ---

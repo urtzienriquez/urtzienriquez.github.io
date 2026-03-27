@@ -11,7 +11,7 @@ summary: Una breve introducción al uso del paquete DataFrames en Julia
 tags:
   - Julia
   - dataframes
-  - análisis de datos
+  - data analyses
 format: hugo-md
 jupyter: julia-1.11
 ---

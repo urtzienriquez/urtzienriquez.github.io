@@ -12,8 +12,8 @@ summary: >-
   hipotesi-kontrastearen oinarriak lantzen ditu
 tags:
   - Julia
-  - datu-analisia
-  - estatistika
+  - data analyses
+  - statistics
 format: hugo-md
 jupyter: julia-1.11
 ---

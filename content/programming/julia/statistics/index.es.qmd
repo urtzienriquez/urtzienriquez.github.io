@@ -7,7 +7,7 @@ series: ["Julia Tutoriales"]
 series_order: 3
 showPagination: false
 summary: "Esta publicación aborda algunos aspectos de los análisis estadísticos exploratorios, así como algunos conceptos básicos del contraste de hipótesis"
-tags: ["Julia", "análisis de datos", "estadística"]
+tags: ["Julia", "data analyses", "statistics"]
 format: hugo-md
 jupyter: julia-1.11
 ---

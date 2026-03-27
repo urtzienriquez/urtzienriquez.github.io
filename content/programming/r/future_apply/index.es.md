@@ -14,9 +14,9 @@ summary: >-
   rendimiento que el clásico bucle for en R.
 tags:
   - R
-  - programación
-  - bucles
-  - paralelización
+  - programming
+  - loops
+  - parallelization
 format: hugo-md
 ---
 
@@ -52,10 +52,10 @@ kable(summary(bench_cheap), caption = "Resultados de la tarea ligera (milisegund
 ```
 
 | expr | min | lq | mean | median | uq | max | neval |
-|:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
-| for_loop | 1526.106 | 1660.558 | 1737.2113 | 1724.8730 | 1767.877 | 2058.762 | 10 |
-| standard_apply | 581.668 | 600.766 | 683.3103 | 610.2285 | 644.566 | 1329.651 | 10 |
-| future_apply | 42850.048 | 46636.701 | 72920.2842 | 70995.9105 | 87396.966 | 139938.649 | 10 |
+|:------------|--------:|--------:|---------:|--------:|--------:|---------:|-----:|
+| for_loop | 1602.845 | 1681.812 | 1824.4828 | 1714.448 | 1854.294 | 2568.728 | 10 |
+| standard_apply | 592.409 | 612.976 | 952.0854 | 637.425 | 1185.623 | 2714.626 | 10 |
+| future_apply | 41520.068 | 44619.462 | 65634.8911 | 45378.888 | 86757.992 | 132784.248 | 10 |
 
 Resultados de la tarea ligera (milisegundos)
 
@@ -97,11 +97,11 @@ bench_expensive <- microbenchmark(
 kable(summary(bench_expensive), caption = "Resultados de la tarea pesada (segundos)")
 ```
 
-| expr           |       min |        lq |     mean |   median |        uq |       max | neval |
+| expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop       | 2010.3002 | 2010.3002 | 2012.249 | 2012.249 | 2014.1975 | 2014.1975 |     2 |
-| standard_apply | 2008.0148 | 2008.0148 | 2008.313 | 2008.313 | 2008.6106 | 2008.6106 |     2 |
-| future_apply   |  286.0831 |  286.0831 |  288.471 |  288.471 |  290.8588 |  290.8588 |     2 |
+| for_loop | 2014.3689 | 2014.3689 | 2015.0432 | 2015.0432 | 2015.7174 | 2015.7174 | 2 |
+| standard_apply | 2007.8064 | 2007.8064 | 2007.9208 | 2007.9208 | 2008.0352 | 2008.0352 | 2 |
+| future_apply | 276.0554 | 276.0554 | 294.9683 | 294.9683 | 313.8811 | 313.8811 | 2 |
 
 Resultados de la tarea pesada (segundos)
 

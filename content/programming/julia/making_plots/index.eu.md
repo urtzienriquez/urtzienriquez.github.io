@@ -10,8 +10,8 @@ showPagination: false
 summary: Julia-ko Makie esparruarekin grafikoak nola egin jakiteko ikuspegi orokorra
 tags:
   - Julia
-  - grafikoak
-  - datu-analisia
+  - plotting
+  - data analyses
 format: hugo-md
 jupyter: julia-1.11
 ---

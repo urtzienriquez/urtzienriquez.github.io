@@ -12,8 +12,8 @@ summary: >-
   exploratorios, así como algunos conceptos básicos del contraste de hipótesis
 tags:
   - Julia
-  - análisis de datos
-  - estadística
+  - data analyses
+  - statistics
 format: hugo-md
 jupyter: julia-1.11
 ---

@@ -11,7 +11,7 @@ summary: Julia-ko DataFrames paketea erabiltzeko sarrera labur-laburra
 tags:
   - Julia
   - dataframes
-  - datu-analisia
+  - data analyses
 format: hugo-md
 jupyter: julia-1.11
 ---

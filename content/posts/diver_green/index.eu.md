@@ -2,7 +2,7 @@
 title: "Artikulu berria musker berdeen dibertsifikazioari buruz"
 description: "artikulu zientifikoaren argitalpena"
 date: 2023-04-22
-tags: ["artikulua", "makroeboluzioa", "biodibertsitatea", "metodo konparatibo filogenetikoak"]
+tags: ["article", "macroevolution", "biodiversity", "phylogenetic comparative methods"]
 ---
 
 Biogeografia historikoak, morfologiak eta nitxo klimatikoaren eboluzioak espezieen dibertsifikazioan duten eragina bereizita aztertu ohi da normalean. Hutsune hori betetzeko, historia geologikoak, inguruneak eta ezaugarri fenotipikoen eboluzioak Mediterraneoko biodibertsitate-gunean (hotspot) musker berdeen linuen dibertsifikazioan duten zeregina ebaluatu dugu.

@@ -10,8 +10,8 @@ showPagination: false
 summary: Una visión general sobre cómo crear gráficos con el framework Makie en Julia
 tags:
   - Julia
-  - gráficos
-  - análisis de datos
+  - plotting
+  - data analyses
 format: hugo-md
 jupyter: julia-1.11
 ---

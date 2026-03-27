@@ -7,7 +7,7 @@ series: ["Julia Tutoriales"]
 series_order: 1
 showPagination: false
 summary: "Una breve introducción al uso del paquete DataFrames en Julia"
-tags: ["Julia", "dataframes", "análisis de datos"]
+tags: ["Julia", "dataframes", "data analyses"]
 format: hugo-md
 jupyter: julia-1.11
 ---

@@ -7,7 +7,7 @@ series: ["R Tutorialak"]
 series_order: 1
 showPagination: false
 summary: 'For-loop-ak oso erabiliak dira zereginak seriean egiteko. Hala ere, "apply" familiako funtzioek eta esparru berri batek (future.apply) zeregin horiek paraleloan egitea ahalbidetzen dute, eta hori for-loop klasikoa baino eraginkorragoa izan daiteke R-n.'
-tags: ['R', 'programazioa', 'begiztak', 'paralelizazioa']
+tags: ['R', 'programming', 'loops', 'parallelization']
 format: hugo-md
 ---
 

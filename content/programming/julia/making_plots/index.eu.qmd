@@ -7,7 +7,7 @@ series: ["Julia Tutorialak"]
 series_order: 2
 showPagination: false
 summary: "Julia-ko Makie esparruarekin grafikoak nola egin jakiteko ikuspegi orokorra"
-tags: ["Julia", "grafikoak", "datu-analisia"]
+tags: ["Julia", "plotting", "data analyses"]
 format: hugo-md
 jupyter: julia-1.11
 ---
