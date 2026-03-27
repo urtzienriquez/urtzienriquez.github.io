@@ -29,7 +29,7 @@ Espezieak bizi diren lekuan zergatik bizi diren azaltzen saiatzen naiz, datu mik
 ### Fenotipoen eta Banaketa-eremuen Makroeboluzioa
 
 <figure style="width: 100%; margin: 0;">
-  <img src="/research/macroevo.jpg" style="width: 100%;" alt="Makroeboluzio-diagramaren deskribapen zehatza">
+  <img src="/img/pictures/macroevo.jpg" style="width: 100%;" alt="Makroeboluzio-diagramaren deskribapen zehatza">
   <figcaption style="text-align: center;">
     1. irudia: <i>Rana</i> generoko igelen nitxo klimatikoen eboluzioa denbora luzean zehar. Egilea: Helena Martínez-Gil
   </figcaption>

@@ -27,7 +27,7 @@ categories: ["People"]
 
 <div class="space-y-8">
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
-    <img src="/people/students/tasos.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Anastasios Limnios" />
+    <img src="/img/people/tasos.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Anastasios Limnios" />
     <div>
       <h3 class="text-xl font-bold mb-1">Anastasios "Tasos" Limnios</h3>
       <p class="text-base mb-1">Tasos is a Biologist and herpetologist specializing in the ecology, behaviour, and environmental niche modelling of reptiles and amphibians. He has worked on how climate change affects functional traits and extinction risks. Currently, he is pursuing a fully funded PhD in Portugal (CIBIO) with the FBIO group, focusing on the synergistic impacts of climate change and pesticides on lizards.</p>
@@ -60,7 +60,7 @@ categories: ["People"]
 
 <div class="space-y-8">
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
-    <img src="/people/students/urban.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Urban Dajčman" />
+    <img src="/img/people/urban.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Urban Dajčman" />
     <div>
       <h3 class="text-xl font-bold !mb-0 !mt-0">Urban Dajčman</h3>
       <p class="text-neutral-500 italic !mb-0 !mt-0">PhD Student</p>
@@ -72,7 +72,7 @@ categories: ["People"]
   </div>
 
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4 mt-6">
-    <img src="/people/students/carolina.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Carolina Reyes-Puig" />
+    <img src="/img/people/carolina.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Carolina Reyes-Puig" />
     <div>
       <h3 class="text-xl font-bold !mb-0 !mt-0">Carolina Reyes-Puig</h3>
       <p class="text-neutral-500 italic !mb-0 !mt-0">PhD Student</p>
@@ -84,7 +84,7 @@ categories: ["People"]
   </div>
 
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4 mt-6">
-    <img src="/people/students/katerina.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Katerina Sioumpoura" />
+    <img src="/img/people/katerina.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Katerina Sioumpoura" />
     <div>
       <h3 class="text-xl font-bold !mb-0 !mt-0">Katerina Sioumpoura</h3>
       <p class="text-neutral-500 italic !mb-0 !mt-0">Master Student</p>
@@ -93,7 +93,7 @@ categories: ["People"]
   </div>
 
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4 mt-6">
-    <img src="/people/students/helena.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Helena Martínez-Gil" />
+    <img src="/img/people/helena.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Helena Martínez-Gil" />
     <div>
       <h3 class="text-xl font-bold !mb-0 !mt-0">Helena Martínez-Gil</h3>
       <p class="text-neutral-500 italic !mb-0 !mt-0">Master Student</p>

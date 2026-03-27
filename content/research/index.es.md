@@ -30,7 +30,7 @@ Busco explicar por qué las especies viven donde viven integrando datos micro y 
 ### Macroevolución de fenotipos y rangos de distribución
 
 <figure style="width: 100%; margin: 0;">
-  <img src="/research/macroevo.jpg" style="width: 100%;" alt="Descripción de la figura">
+  <img src="/img/pictures/macroevo.jpg" style="width: 100%;" alt="Descripción de la figura">
   <figcaption style="text-align: center;">
     Figura 1: Evolución de los nichos climáticos en ranas del género <i>Rana</i> a lo largo del tiempo profundo. Autora: Helena Martínez-Gil.
   </figcaption>
