@@ -3,6 +3,10 @@ title: Uso de DataFrames.jl
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25T00:00:00.000Z
 weight: 10
+series:
+  - Julia Tutoriales
+series_order: 1
+showPagination: false
 summary: Una breve introducción al uso del paquete DataFrames en Julia
 tags:
   - Julia

@@ -3,6 +3,10 @@ title: Benchmarking future.apply
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25T00:00:00.000Z
 weight: 10
+series:
+  - R Tutorials
+series_order: 1
+showPagination: false
 summary: >-
   For loops are very commonly used for performing tasks in series. However, the
   apply family of functions and a new framework (future.apply) allow to perform
@@ -48,10 +52,10 @@ kable(summary(bench_cheap), caption = "Cheap Task Results (milliseconds)")
 ```
 
 | expr | min | lq | mean | median | uq | max | neval |
-|:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
-| for_loop | 1559.343 | 1661.762 | 1964.0086 | 1811.4175 | 1960.423 | 3529.293 | 10 |
-| standard_apply | 573.510 | 579.167 | 622.6739 | 597.7205 | 620.955 | 857.438 | 10 |
-| future_apply | 43631.221 | 44972.875 | 66035.7896 | 51369.2755 | 82316.685 | 132553.906 | 10 |
+|:------------|--------:|--------:|---------:|--------:|--------:|---------:|-----:|
+| for_loop | 1505.470 | 1620.460 | 1750.1643 | 1726.318 | 1758.551 | 2243.338 | 10 |
+| standard_apply | 570.936 | 592.062 | 711.7003 | 683.718 | 832.524 | 973.899 | 10 |
+| future_apply | 41967.412 | 44640.056 | 70149.5995 | 56952.688 | 92128.300 | 146645.257 | 10 |
 
 Cheap Task Results (milliseconds)
 
@@ -97,9 +101,9 @@ kable(summary(bench_expensive), caption = "Expensive Task Results (seconds)")
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2014.6665 | 2014.6665 | 2015.7225 | 2015.7225 | 2016.7784 | 2016.7784 | 2 |
-| standard_apply | 2007.9510 | 2007.9510 | 2008.2138 | 2008.2138 | 2008.4767 | 2008.4767 | 2 |
-| future_apply | 294.6247 | 294.6247 | 301.0491 | 301.0491 | 307.4736 | 307.4736 | 2 |
+| for_loop | 2009.6924 | 2009.6924 | 2010.7566 | 2010.7566 | 2011.8208 | 2011.8208 | 2 |
+| standard_apply | 2008.1581 | 2008.1581 | 2008.3821 | 2008.3821 | 2008.6062 | 2008.6062 | 2 |
+| future_apply | 285.5616 | 285.5616 | 292.2592 | 292.2592 | 298.9567 | 298.9567 | 2 |
 
 Expensive Task Results (seconds)
 

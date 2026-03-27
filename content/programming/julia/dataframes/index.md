@@ -3,6 +3,10 @@ title: Using DataFrames.jl
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25T00:00:00.000Z
 weight: 10
+series:
+  - Julia Tutorials
+series_order: 1
+showPagination: false
 summary: A very brief introduction on using the DataFrames package in Julia
 tags:
   - Julia

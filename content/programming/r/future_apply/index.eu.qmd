@@ -3,6 +3,9 @@ title: 'future.apply-rekin benchmarking-a egiten'
 author: 'Urtzi Enriquez-Urzelai'
 date: 2026-03-25
 weight: 10
+series: ["R Tutorialak"]
+series_order: 1
+showPagination: false
 summary: 'For-loop-ak oso erabiliak dira zereginak seriean egiteko. Hala ere, "apply" familiako funtzioek eta esparru berri batek (future.apply) zeregin horiek paraleloan egitea ahalbidetzen dute, eta hori for-loop klasikoa baino eraginkorragoa izan daiteke R-n.'
 tags: ['R', 'programazioa', 'begiztak', 'paralelizazioa']
 format: hugo-md

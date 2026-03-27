@@ -3,6 +3,10 @@ title: Datuen analisia Julia-rekin
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-27T00:00:00.000Z
 weight: 30
+series:
+  - Julia Tutorialak
+series_order: 3
+showPagination: false
 summary: >-
   Sarrera honek estatistika esploratzailearen alderdi batzuk eta
   hipotesi-kontrastearen oinarriak lantzen ditu

@@ -3,6 +3,10 @@ title: future.apply-rekin benchmarking-a egiten
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25T00:00:00.000Z
 weight: 10
+series:
+  - R Tutorialak
+series_order: 1
+showPagination: false
 summary: >-
   For-loop-ak oso erabiliak dira zereginak seriean egiteko. Hala ere, "apply"
   familiako funtzioek eta esparru berri batek (future.apply) zeregin horiek
@@ -48,10 +52,10 @@ kable(summary(bench_cheap), caption = "Zeregin merkearen emaitzak (milisegundoak
 ```
 
 | expr | min | lq | mean | median | uq | max | neval |
-|:------------|--------:|--------:|---------:|--------:|--------:|---------:|-----:|
-| for_loop | 1597.582 | 1642.186 | 1887.5209 | 1727.636 | 1860.513 | 3384.067 | 10 |
-| standard_apply | 583.710 | 589.074 | 663.2824 | 625.522 | 726.864 | 857.901 | 10 |
-| future_apply | 41581.888 | 43988.588 | 67064.7123 | 59031.182 | 88363.362 | 123925.270 | 10 |
+|:------------|--------:|--------:|--------:|--------:|--------:|---------:|-----:|
+| for_loop | 1626.834 | 1680.241 | 1772.718 | 1740.202 | 1815.745 | 2008.491 | 10 |
+| standard_apply | 576.123 | 589.844 | 1079.011 | 619.582 | 1546.017 | 2448.915 | 10 |
+| future_apply | 42978.283 | 44313.255 | 68627.230 | 70632.849 | 78685.548 | 117420.592 | 10 |
 
 Zeregin merkearen emaitzak (milisegundoak)
 
@@ -95,9 +99,9 @@ kable(summary(bench_expensive), caption = "Zeregin garestiaren emaitzak (segundo
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2009.3005 | 2009.3005 | 2012.4186 | 2012.4186 | 2015.5367 | 2015.5367 | 2 |
-| standard_apply | 2008.4625 | 2008.4625 | 2008.5676 | 2008.5676 | 2008.6726 | 2008.6726 | 2 |
-| future_apply | 284.3551 | 284.3551 | 288.7213 | 288.7213 | 293.0876 | 293.0876 | 2 |
+| for_loop | 2009.2834 | 2009.2834 | 2012.1795 | 2012.1795 | 2015.0756 | 2015.0756 | 2 |
+| standard_apply | 2008.4217 | 2008.4217 | 2010.7083 | 2010.7083 | 2012.9950 | 2012.9950 | 2 |
+| future_apply | 293.2761 | 293.2761 | 296.5502 | 296.5502 | 299.8244 | 299.8244 | 2 |
 
 Zeregin garestiaren emaitzak (segundoak)
 

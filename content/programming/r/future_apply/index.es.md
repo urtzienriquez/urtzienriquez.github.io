@@ -3,6 +3,10 @@ title: Benchmarking de future.apply
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25T00:00:00.000Z
 weight: 10
+series:
+  - R Tutoriales
+series_order: 1
+showPagination: false
 summary: >-
   Los bucles for se utilizan habitualmente para realizar tareas en serie. Sin
   embargo, la familia de funciones apply y el nuevo framework (future.apply)
@@ -49,9 +53,9 @@ kable(summary(bench_cheap), caption = "Resultados de la tarea ligera (milisegund
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
-| for_loop | 1463.298 | 1577.225 | 1852.6800 | 1781.3680 | 2050.745 | 2421.552 | 10 |
-| standard_apply | 572.569 | 602.659 | 930.8508 | 757.4185 | 877.305 | 2099.357 | 10 |
-| future_apply | 44190.360 | 48779.636 | 76063.6181 | 80894.5395 | 92133.087 | 131910.444 | 10 |
+| for_loop | 1526.106 | 1660.558 | 1737.2113 | 1724.8730 | 1767.877 | 2058.762 | 10 |
+| standard_apply | 581.668 | 600.766 | 683.3103 | 610.2285 | 644.566 | 1329.651 | 10 |
+| future_apply | 42850.048 | 46636.701 | 72920.2842 | 70995.9105 | 87396.966 | 139938.649 | 10 |
 
 Resultados de la tarea ligera (milisegundos)
 
@@ -93,11 +97,11 @@ bench_expensive <- microbenchmark(
 kable(summary(bench_expensive), caption = "Resultados de la tarea pesada (segundos)")
 ```
 
-| expr | min | lq | mean | median | uq | max | neval |
+| expr           |       min |        lq |     mean |   median |        uq |       max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2013.9792 | 2013.9792 | 2014.2554 | 2014.2554 | 2014.5315 | 2014.5315 | 2 |
-| standard_apply | 2008.4532 | 2008.4532 | 2009.3416 | 2009.3416 | 2010.2299 | 2010.2299 | 2 |
-| future_apply | 284.0194 | 284.0194 | 288.7829 | 288.7829 | 293.5463 | 293.5463 | 2 |
+| for_loop       | 2010.3002 | 2010.3002 | 2012.249 | 2012.249 | 2014.1975 | 2014.1975 |     2 |
+| standard_apply | 2008.0148 | 2008.0148 | 2008.313 | 2008.313 | 2008.6106 | 2008.6106 |     2 |
+| future_apply   |  286.0831 |  286.0831 |  288.471 |  288.471 |  290.8588 |  290.8588 |     2 |
 
 Resultados de la tarea pesada (segundos)
 

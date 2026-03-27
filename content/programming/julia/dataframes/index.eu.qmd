@@ -3,6 +3,9 @@ title: DataFrames.jl erabiltzen
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25
 weight: 10
+series: ["Julia Tutorialak"]
+series_order: 1
+showPagination: false
 summary: "Julia-ko DataFrames paketea erabiltzeko sarrera labur-laburra"
 tags: ["Julia", "dataframes", "datu-analisia"]
 format: hugo-md

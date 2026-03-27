@@ -3,6 +3,9 @@ title: Análisis de datos en Julia
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-27
 weight: 30
+series: ["Julia Tutoriales"]
+series_order: 3
+showPagination: false
 summary: "Esta publicación aborda algunos aspectos de los análisis estadísticos exploratorios, así como algunos conceptos básicos del contraste de hipótesis"
 tags: ["Julia", "análisis de datos", "estadística"]
 format: hugo-md

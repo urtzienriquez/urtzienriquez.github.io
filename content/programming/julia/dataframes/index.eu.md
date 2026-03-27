@@ -3,6 +3,10 @@ title: DataFrames.jl erabiltzen
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25T00:00:00.000Z
 weight: 10
+series:
+  - Julia Tutorialak
+series_order: 1
+showPagination: false
 summary: Julia-ko DataFrames paketea erabiltzeko sarrera labur-laburra
 tags:
   - Julia

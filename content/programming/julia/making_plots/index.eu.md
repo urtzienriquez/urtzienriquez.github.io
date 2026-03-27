@@ -3,6 +3,10 @@ title: Grafikoak Makie.jl-rekin egiten
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-26T00:00:00.000Z
 weight: 20
+series:
+  - Julia Tutorialak
+series_order: 2
+showPagination: false
 summary: Julia-ko Makie esparruarekin grafikoak nola egin jakiteko ikuspegi orokorra
 tags:
   - Julia
