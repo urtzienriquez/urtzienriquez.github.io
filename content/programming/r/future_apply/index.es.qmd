@@ -6,8 +6,6 @@ weight: 10
 summary: 'Los bucles for se utilizan habitualmente para realizar tareas en serie. Sin embargo, la familia de funciones apply y el nuevo framework (future.apply) permiten realizar estas tareas en paralelo, lo que podría ofrecer un mejor rendimiento que el clásico bucle for en R.'
 tags: ['R', 'programación', 'bucles', 'paralelización']
 format: hugo-md
-post-render:
-    - bash /home/urtzi/Documents/GitHub/urtzienriquez.github.io/util/fix-hugo-images.sh
 ---
 
 ```{r}
