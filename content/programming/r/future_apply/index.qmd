@@ -5,11 +5,7 @@ date: 2026-03-25
 weight: 10
 summary: 'For loops are very commonly used for performing tasks in series. However, the apply family of functions and a new framework (future.apply) allow to perform this tasks in parallel, which might be more performant than the classical for-loop in R.'
 tags: ['R', 'programming', 'loops', 'parallelization']
-format: 
-  hugo-md:
-    variant: commonmark  # Esto es CRÍTICO para quitar el .markdown_strict
-    output-file: "index.md"
-jupyter: ir
+format: hugo-md
 ---
 
 ```{r}

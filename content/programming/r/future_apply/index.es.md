@@ -13,11 +13,7 @@ tags:
   - programación
   - bucles
   - paralelización
-format:
-  hugo-md:
-    variant: commonmark
-    output-file: index.es.md
-jupyter: ir
+format: hugo-md
 ---
 
 
@@ -49,23 +45,23 @@ bench_cheap <- microbenchmark(
 
 # Generar tabla
 kable(summary(bench_cheap), caption = "Resultados de la tarea ligera (milisegundos)")
+```
 
+| expr | min | lq | mean | median | uq | max | neval |
+|:------------|--------:|--------:|--------:|---------:|--------:|---------:|-----:|
+| for_loop | 1491.598 | 1590.751 | 1831.395 | 1755.5425 | 2073.521 | 2359.896 | 10 |
+| standard_apply | 572.357 | 594.109 | 685.134 | 613.8845 | 632.390 | 1293.046 | 10 |
+| future_apply | 50387.526 | 70500.132 | 85385.096 | 87590.1040 | 95459.109 | 137778.506 | 10 |
+
+Resultados de la tarea ligera (milisegundos)
+
+``` r
 # Generar figura
 autoplot(bench_cheap) +
   labs(title = "Tarea ligera: La sobrecarga del paralelo es visible")
 ```
 
-
-
-    Table: Resultados de la tarea ligera (milisegundos)
-
-    |expr           |       min|        lq|       mean|    median|        uq|        max| neval|
-    |:--------------|---------:|---------:|----------:|---------:|---------:|----------:|-----:|
-    |for_loop       |  1517.486|  1635.074|  2010.5220|  1846.978|  2086.406|   3566.354|    10|
-    |standard_apply |   574.656|   579.240|   695.3018|   690.241|   777.345|    939.550|    10|
-    |future_apply   | 43056.405| 44634.294| 69688.5494| 61279.304| 84963.011| 130556.395|    10|
-
-<img src="index.es_files/figure-markdown_strict/cheap_benchmark-output-2.png" id="cheap_benchmark-2" width="420" height="420" />
+<img src="/programming/r/future_apply/index.es.markdown_strict_files/figure-markdown_strict/cheap_benchmark-1.png" width="768" />
 
 ------------------------------------------------------------------------
 
@@ -95,20 +91,20 @@ bench_expensive <- microbenchmark(
 
 # Generar tabla
 kable(summary(bench_expensive), caption = "Resultados de la tarea pesada (segundos)")
+```
 
+| expr | min | lq | mean | median | uq | max | neval |
+|:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
+| for_loop | 2009.0968 | 2009.0968 | 2013.2061 | 2013.2061 | 2017.3153 | 2017.3153 | 2 |
+| standard_apply | 2007.6197 | 2007.6197 | 2009.0432 | 2009.0432 | 2010.4667 | 2010.4667 | 2 |
+| future_apply | 293.8769 | 293.8769 | 294.2181 | 294.2181 | 294.5593 | 294.5593 | 2 |
+
+Resultados de la tarea pesada (segundos)
+
+``` r
 # Generar figura
 autoplot(bench_expensive) +
   labs(title = "Tarea pesada: Future gana por goleada")
 ```
 
-
-
-    Table: Resultados de la tarea pesada (segundos)
-
-    |expr           |       min|        lq|      mean|    median|        uq|       max| neval|
-    |:--------------|---------:|---------:|---------:|---------:|---------:|---------:|-----:|
-    |for_loop       | 2010.5608| 2010.5608| 2012.4051| 2012.4051| 2014.2494| 2014.2494|     2|
-    |standard_apply | 2008.1570| 2008.1570| 2008.2640| 2008.2640| 2008.3710| 2008.3710|     2|
-    |future_apply   |  293.6279|  293.6279|  298.1794|  298.1794|  302.7309|  302.7309|     2|
-
-<img src="index.es_files/figure-markdown_strict/expensive_benchmark-output-2.png" id="expensive_benchmark-2" width="420" height="420" />
+<img src="/programming/r/future_apply/index.es.markdown_strict_files/figure-markdown_strict/expensive_benchmark-1.png" width="768" />

@@ -13,11 +13,7 @@ tags:
   - programming
   - loops
   - parallelization
-format:
-  hugo-md:
-    variant: commonmark
-    output-file: index.md
-jupyter: ir
+format: hugo-md
 ---
 
 
@@ -49,23 +45,23 @@ bench_cheap <- microbenchmark(
 
 # Generate Table
 kable(summary(bench_cheap), caption = "Cheap Task Results (milliseconds)")
+```
 
+| expr | min | lq | mean | median | uq | max | neval |
+|:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
+| for_loop | 1551.019 | 1644.471 | 1903.9925 | 1804.7350 | 2142.084 | 2695.779 | 10 |
+| standard_apply | 576.841 | 610.671 | 665.6729 | 630.1005 | 649.784 | 894.412 | 10 |
+| future_apply | 42336.477 | 45494.637 | 72417.1849 | 64824.6360 | 91603.538 | 139996.941 | 10 |
+
+Cheap Task Results (milliseconds)
+
+``` r
 # Generate Figure
 autoplot(bench_cheap) +
   labs(title = "Cheap Task: Parallel Overhead is Visible")
 ```
 
-
-
-    Table: Cheap Task Results (milliseconds)
-
-    |expr           |       min|        lq|       mean|     median|        uq|        max| neval|
-    |:--------------|---------:|---------:|----------:|----------:|---------:|----------:|-----:|
-    |for_loop       |  1513.654|  1633.213|  1730.0914|  1749.5575|  1863.904|   1882.998|    10|
-    |standard_apply |   575.424|   582.899|   610.7246|   599.2365|   615.042|    686.890|    10|
-    |future_apply   | 41263.220| 42569.222| 66170.0383| 53849.4030| 94305.523| 124813.811|    10|
-
-<img src="index_files/figure-markdown_strict/cheap_benchmark-output-2.png" id="cheap_benchmark-2" width="420" height="420" />
+<img src="index.markdown_strict_files/figure-markdown_strict/cheap_benchmark-1.png" width="768" />
 
 ------------------------------------------------------------------------
 
@@ -97,21 +93,21 @@ bench_expensive <- microbenchmark(
 # Generate Table
 
 kable(summary(bench_expensive), caption = "Expensive Task Results (seconds)")
+```
 
+| expr | min | lq | mean | median | uq | max | neval |
+|:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
+| for_loop | 2012.2580 | 2012.2580 | 2013.3410 | 2013.3410 | 2014.4241 | 2014.4241 | 2 |
+| standard_apply | 2007.6682 | 2007.6682 | 2010.6357 | 2010.6357 | 2013.6033 | 2013.6033 | 2 |
+| future_apply | 297.5463 | 297.5463 | 304.1004 | 304.1004 | 310.6545 | 310.6545 | 2 |
+
+Expensive Task Results (seconds)
+
+``` r
 # Generate Figure
 
 autoplot(bench_expensive) +
   labs(title = "Expensive Task: Future Wins Big")
 ```
 
-
-
-    Table: Expensive Task Results (seconds)
-
-    |expr           |      min|       lq|      mean|    median|        uq|       max| neval|
-    |:--------------|--------:|--------:|---------:|---------:|---------:|---------:|-----:|
-    |for_loop       | 2009.630| 2009.630| 2010.0217| 2010.0217| 2010.4130| 2010.4130|     2|
-    |standard_apply | 2007.846| 2007.846| 2011.5187| 2011.5187| 2015.1915| 2015.1915|     2|
-    |future_apply   |  302.531|  302.531|  307.3779|  307.3779|  312.2248|  312.2248|     2|
-
-<img src="index_files/figure-markdown_strict/expensive_benchmark-output-2.png" id="expensive_benchmark-2" width="420" height="420" />
+<img src="index.markdown_strict_files/figure-markdown_strict/expensive_benchmark-1.png" width="768" />
