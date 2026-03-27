@@ -7,6 +7,8 @@ series:
 series_order: 2
 showPagination: false
 summary: Julia-ko Makie esparruarekin grafikoak nola egin jakiteko ikuspegi orokorra
+categories:
+  - Programming
 tags:
   - Julia
   - plotting

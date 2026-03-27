@@ -6,6 +6,7 @@ series: ["Julia Tutorials"]
 series_order: 1
 showPagination: false
 summary: "A very brief introduction on using the DataFrames package in Julia"
+categories: ["Programming"]
 tags: ["Julia", "dataframes", "data analyses"]
 format: hugo-md
 jupyter: julia-1.11

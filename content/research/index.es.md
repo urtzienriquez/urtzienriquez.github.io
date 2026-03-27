@@ -17,6 +17,7 @@ showEdit: false
 showViews: false
 showLikes: false
 layoutBackgroundHeaderSpace: false
+categories: ["Research"]
 ---
 
 Soy un ecólogo evolutivo y fisiológico dedicado a comprender las adaptaciones fenotípicas que permiten a los organismos desenvolverse y persistir en sus entornos. Mi investigación se sitúa en la intersección entre la biología experimental, la macroevolución y el modelado computacional.

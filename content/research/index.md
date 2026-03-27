@@ -17,6 +17,7 @@ showEdit: false
 showViews: false
 showLikes: false
 layoutBackgroundHeaderSpace: false
+categories: ["Research"]
 ---
 
 I am a physiological and evolutionary ecologist dedicated to understanding the phenotypic adaptations that allow organisms to navigate and persist in their environments. My research sits at the intersection of experimental biology, macroevolution, and computational modeling.

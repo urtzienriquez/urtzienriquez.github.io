@@ -4,7 +4,8 @@ description: "Biophysical Ecology series - 01"
 date: 2026-03-27
 series: ["Biophysical Ecology"]
 series_order: 1
-tags: ["biophysics", "ecology"]
+categories: ["Ecology"]
+tags: ["biophysics", "modelling"]
 ---
 
 {{< katex >}}

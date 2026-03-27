@@ -7,6 +7,8 @@ series:
 series_order: 1
 showPagination: false
 summary: A very brief introduction on using the DataFrames package in Julia
+categories:
+  - Programming
 tags:
   - Julia
   - dataframes

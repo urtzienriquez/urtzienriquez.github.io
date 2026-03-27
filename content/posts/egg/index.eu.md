@@ -2,7 +2,8 @@
 title: "Arrautza-artikulua argitaratu da!"
 description: "artikulu zientifikoaren argitalpena"
 date: 2023-04-23
-tags: ["article", "biophysics", "physiology", "modelling"]
+categories: ["Publications"]
+tags: ["biophysics", "physiology", "modelling"]
 ---
 
 Arrautzak bizi-etapa oso ahula dira; baldintza termiko eta hidrikoekiko sentikorrak diren arren, ezin diete portaeraren bidez ingurune estresagarriei ihes egin. Habia naturaletako arrautzen garapenaren eredu mekanizista orokor batek tenperaturaren, hezetasunaren, erradiazioaren (lurrean badaude) eta potentzial hidrikoaren (lurperatuta badaude) iragarpen mikroklimatikoak integratu behar ditu, arrautzaren bero eta ur trukearen ereduekin eta garapen-prozesuaren metabolismoarekin batera. Eredu hori eraikitzeko pieza guztiak existitzen diren arren, oraindik ez ziren modelizazio-esparru orokor batean integratu.

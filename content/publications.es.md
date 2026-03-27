@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Publicaciones'
 date: 2026-03-25
 layout: 'single'
 showAuthor: false
@@ -20,6 +20,7 @@ showEdit: false
 showViews: false
 showLikes: false
 layoutBackgroundHeaderSpace: false
+categories: ["Publications"]
 ---
 
 ### 2026

@@ -20,6 +20,7 @@ showEdit: false
 showViews: false
 showLikes: false
 layoutBackgroundHeaderSpace: false
+categories: ["People"]
 ---
 <div class="space-y-8">
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">

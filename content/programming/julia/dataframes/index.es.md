@@ -7,6 +7,8 @@ series:
 series_order: 1
 showPagination: false
 summary: Una breve introducción al uso del paquete DataFrames en Julia
+categories:
+  - Programming
 tags:
   - Julia
   - dataframes

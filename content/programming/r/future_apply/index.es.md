@@ -11,9 +11,10 @@ summary: >-
   embargo, la familia de funciones apply y el nuevo framework (future.apply)
   permiten realizar estas tareas en paralelo, lo que podría ofrecer un mejor
   rendimiento que el clásico bucle for en R.
+categories:
+  - Programming
 tags:
   - R
-  - programming
   - loops
   - parallelization
 format: hugo-md
@@ -51,10 +52,10 @@ kable(summary(bench_cheap), caption = "Resultados de la tarea ligera (milisegund
 ```
 
 | expr | min | lq | mean | median | uq | max | neval |
-|:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
-| for_loop | 1613.813 | 1685.334 | 2131.2424 | 1839.1135 | 2497.201 | 3276.460 | 10 |
-| standard_apply | 578.593 | 610.074 | 739.9632 | 669.7915 | 846.517 | 1022.569 | 10 |
-| future_apply | 41053.019 | 43732.484 | 71119.8329 | 64036.6630 | 88714.287 | 131977.539 | 10 |
+|:------------|--------:|--------:|---------:|--------:|--------:|---------:|-----:|
+| for_loop | 1533.673 | 1594.044 | 1715.9777 | 1696.553 | 1849.909 | 1960.733 | 10 |
+| standard_apply | 581.569 | 592.545 | 632.0822 | 607.935 | 647.593 | 769.924 | 10 |
+| future_apply | 42645.687 | 47242.446 | 74838.4215 | 76065.549 | 92860.346 | 124832.589 | 10 |
 
 Resultados de la tarea ligera (milisegundos)
 
@@ -98,9 +99,9 @@ kable(summary(bench_expensive), caption = "Resultados de la tarea pesada (segund
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2007.7235 | 2007.7235 | 2009.9483 | 2009.9483 | 2012.1732 | 2012.1732 | 2 |
-| standard_apply | 2007.2402 | 2007.2402 | 2007.8000 | 2007.8000 | 2008.3598 | 2008.3598 | 2 |
-| future_apply | 278.3014 | 278.3014 | 282.9933 | 282.9933 | 287.6853 | 287.6853 | 2 |
+| for_loop | 2010.4419 | 2010.4419 | 2012.2996 | 2012.2996 | 2014.1572 | 2014.1572 | 2 |
+| standard_apply | 2008.5706 | 2008.5706 | 2008.8800 | 2008.8800 | 2009.1893 | 2009.1893 | 2 |
+| future_apply | 282.1072 | 282.1072 | 290.7669 | 290.7669 | 299.4266 | 299.4266 | 2 |
 
 Resultados de la tarea pesada (segundos)
 

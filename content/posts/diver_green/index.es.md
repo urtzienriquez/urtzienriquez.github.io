@@ -2,7 +2,8 @@
 title: "Nuevo artículo sobre la diversificación de los lagartos verdes"
 description: "publicación de artículo"
 date: 2023-04-22
-tags: ["article", "macroevolution", "biodiversity", "phylogenetic comparative methods"]
+categories: ["Publications"]
+tags: ["macroevolution", "biodiversity", "phylogenetic comparative methods"]
 ---
 
 Las contribuciones de la biogeografía histórica, la morfología y la evolución del nicho climático en la configuración de la diversificación de las especies se han examinado habitualmente por separado. Para colmar esta laguna, evaluamos el papel relativo de la historia geológica, el entorno y la evolución de los rasgos fenotípicos en la diversificación de los linajes de lagartos verdes en el punto caliente (hotspot) de biodiversidad del Mediterráneo.

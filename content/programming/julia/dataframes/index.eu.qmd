@@ -6,6 +6,7 @@ series: ["Julia Tutorialak"]
 series_order: 1
 showPagination: false
 summary: "Julia-ko DataFrames paketea erabiltzeko sarrera labur-laburra"
+categories: ["Programming"]
 tags: ["Julia", "dataframes", "data analyses"]
 format: hugo-md
 jupyter: julia-1.11

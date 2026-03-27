@@ -7,6 +7,8 @@ series:
 series_order: 2
 showPagination: false
 summary: An overview on how to make plots with the Makie framework in Julia
+categories:
+  - Programming
 tags:
   - Julia
   - plotting

@@ -7,6 +7,8 @@ series:
 series_order: 2
 showPagination: false
 summary: Una visión general sobre cómo crear gráficos con el framework Makie en Julia
+categories:
+  - Programming
 tags:
   - Julia
   - plotting

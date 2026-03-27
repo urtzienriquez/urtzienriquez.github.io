@@ -2,7 +2,8 @@
 title: "The egg paper is out!"
 description: "paper publication"
 date: 2023-04-23
-tags: ["article", "biophysics", "physiology", "modelling"]
+categories: ["Publications"]
+tags: ["biophysics", "physiology", "modelling"]
 ---
 
 Eggs are a vulnerable stage because they are sensitive to thermal and hydric conditions and yet cannot behaviourally avoid stressful environments. A general mechanistic model of egg development in natural nests requires microclimatic predictions of temperature, humidity, radiation (if above ground) and water potential (if buried in soil) to be integrated with models of heat and water exchange of the egg and the metabolism of the developmental process. Although all the required pieces for such a model now exist, they have not been integrated into a general modelling framework.

@@ -20,6 +20,7 @@ showEdit: false
 showViews: false
 showLikes: false
 layoutBackgroundHeaderSpace: false
+categories: ["People"]
 ---
 
 ## Doktoregaiak

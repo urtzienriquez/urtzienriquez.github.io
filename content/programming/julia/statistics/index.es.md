@@ -9,6 +9,8 @@ showPagination: false
 summary: >-
   Esta publicación aborda algunos aspectos de los análisis estadísticos
   exploratorios, así como algunos conceptos básicos del contraste de hipótesis
+categories:
+  - Programming
 tags:
   - Julia
   - data analyses

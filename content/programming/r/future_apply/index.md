@@ -11,9 +11,10 @@ summary: >-
   apply family of functions and a new framework (future.apply) allow to perform
   this tasks in parallel, which might be more performant than the classical
   for-loop in R.
+categories:
+  - Programming
 tags:
   - R
-  - programming
   - loops
   - parallelization
 format: hugo-md
@@ -52,9 +53,9 @@ kable(summary(bench_cheap), caption = "Cheap Task Results (milliseconds)")
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
-| for_loop | 1627.203 | 1710.958 | 2016.6050 | 1888.7455 | 2275.979 | 2993.959 | 10 |
-| standard_apply | 571.801 | 596.274 | 750.1603 | 657.2715 | 987.174 | 1070.018 | 10 |
-| future_apply | 43858.992 | 50738.741 | 76084.3102 | 69395.2050 | 88297.921 | 145216.788 | 10 |
+| for_loop | 1507.353 | 1528.993 | 2088.8757 | 1886.9765 | 2247.506 | 3612.795 | 10 |
+| standard_apply | 579.942 | 593.286 | 650.1938 | 620.8995 | 646.442 | 972.261 | 10 |
+| future_apply | 43903.082 | 66857.227 | 80391.6234 | 83932.7115 | 90847.894 | 133924.993 | 10 |
 
 Cheap Task Results (milliseconds)
 
@@ -100,9 +101,9 @@ kable(summary(bench_expensive), caption = "Expensive Task Results (seconds)")
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2008.8803 | 2008.8803 | 2009.5386 | 2009.5386 | 2010.1969 | 2010.1969 | 2 |
-| standard_apply | 2007.6840 | 2007.6840 | 2007.8177 | 2007.8177 | 2007.9514 | 2007.9514 | 2 |
-| future_apply | 289.9186 | 289.9186 | 297.2076 | 297.2076 | 304.4966 | 304.4966 | 2 |
+| for_loop | 2010.9176 | 2010.9176 | 2012.9459 | 2012.9459 | 2014.9741 | 2014.9741 | 2 |
+| standard_apply | 2008.2429 | 2008.2429 | 2008.2641 | 2008.2641 | 2008.2853 | 2008.2853 | 2 |
+| future_apply | 284.4746 | 284.4746 | 288.6135 | 288.6135 | 292.7524 | 292.7524 | 2 |
 
 Expensive Task Results (seconds)
 

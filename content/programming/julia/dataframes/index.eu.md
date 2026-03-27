@@ -7,6 +7,8 @@ series:
 series_order: 1
 showPagination: false
 summary: Julia-ko DataFrames paketea erabiltzeko sarrera labur-laburra
+categories:
+  - Programming
 tags:
   - Julia
   - dataframes

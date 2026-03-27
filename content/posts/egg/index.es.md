@@ -2,7 +2,8 @@
 title: "Publicado el artículo huevo!"
 description: "paper publication"
 date: 2023-04-23
-tags: ["article", "biophysics", "physiology", "modelling"]
+categories: ["Publications"]
+tags: ["biophysics", "physiology", "modelling"]
 ---
 
 Los huevos son una etapa vulnerable porque son sensibles a las condiciones térmicas e hídricas y, sin embargo, no pueden evitar conductualmente los entornos estresantes. Un modelo mecanístico general del desarrollo de los huevos en nidos naturales requiere que las predicciones microclimáticas de temperatura, humedad, radiación (si están sobre el suelo) y potencial hídrico (si están enterrados en el suelo) se integren con modelos de intercambio de calor y agua del huevo y el metabolismo del proceso de desarrollo. Aunque ya existen todas las piezas necesarias para tal modelo, no se habían integrado hasta ahora en un marco de modelado general.

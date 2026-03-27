@@ -6,7 +6,8 @@ series: ["R Tutorials"]
 series_order: 1
 showPagination: false
 summary: 'For loops are very commonly used for performing tasks in series. However, the apply family of functions and a new framework (future.apply) allow to perform this tasks in parallel, which might be more performant than the classical for-loop in R.'
-tags: ['R', 'programming', 'loops', 'parallelization']
+categories: ["Programming"]
+tags: ['R', 'loops', 'parallelization']
 format: hugo-md
 ---
 

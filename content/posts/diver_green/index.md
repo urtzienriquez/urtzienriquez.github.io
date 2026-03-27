@@ -2,7 +2,8 @@
 title: "New paper about the diversification of green lizards"
 description: "paper publication"
 date: 2023-04-22
-tags: ["article", "macroevolution", "biodiversity", "phylogenetic comparative methods"]
+categories: ["Publications"]
+tags: ["macroevolution", "biodiversity", "phylogenetic comparative methods"]
 ---
 
 The contributions of historical biogeography, morphology and climatic niche evolution in shaping species diversification have been typically examined separately. To fill this gap, we assessed the relative role of geologic history, environment and phenotypic trait evolution in lineage diversification of green lizards in the Mediterranean biodiversity hotspot.

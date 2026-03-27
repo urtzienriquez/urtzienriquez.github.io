@@ -11,9 +11,10 @@ summary: >-
   familiako funtzioek eta esparru berri batek (future.apply) zeregin horiek
   paraleloan egitea ahalbidetzen dute, eta hori for-loop klasikoa baino
   eraginkorragoa izan daiteke R-n.
+categories:
+  - Programming
 tags:
   - R
-  - programming
   - loops
   - parallelization
 format: hugo-md
@@ -52,9 +53,9 @@ kable(summary(bench_cheap), caption = "Zeregin merkearen emaitzak (milisegundoak
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
-| for_loop | 1614.962 | 1719.768 | 1967.3372 | 1929.9275 | 2002.467 | 2563.996 | 10 |
-| standard_apply | 585.558 | 628.908 | 697.3279 | 651.5355 | 675.465 | 1167.510 | 10 |
-| future_apply | 43101.296 | 48744.515 | 75279.3288 | 74456.9755 | 92012.472 | 137779.228 | 10 |
+| for_loop | 1621.207 | 1649.317 | 1844.2160 | 1738.0125 | 1816.831 | 2798.576 | 10 |
+| standard_apply | 570.980 | 572.757 | 679.9542 | 609.3615 | 668.030 | 1070.847 | 10 |
+| future_apply | 41958.711 | 44211.130 | 66316.4306 | 45609.9595 | 91943.761 | 131875.262 | 10 |
 
 Zeregin merkearen emaitzak (milisegundoak)
 
@@ -98,9 +99,9 @@ kable(summary(bench_expensive), caption = "Zeregin garestiaren emaitzak (segundo
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2009.2154 | 2009.2154 | 2011.1665 | 2011.1665 | 2013.1175 | 2013.1175 | 2 |
-| standard_apply | 2008.0596 | 2008.0596 | 2008.2003 | 2008.2003 | 2008.3409 | 2008.3409 | 2 |
-| future_apply | 291.1259 | 291.1259 | 293.0827 | 293.0827 | 295.0395 | 295.0395 | 2 |
+| for_loop | 2014.4471 | 2014.4471 | 2014.9119 | 2014.9119 | 2015.3766 | 2015.3766 | 2 |
+| standard_apply | 2009.7203 | 2009.7203 | 2011.6294 | 2011.6294 | 2013.5385 | 2013.5385 | 2 |
+| future_apply | 287.4234 | 287.4234 | 298.2098 | 298.2098 | 308.9962 | 308.9962 | 2 |
 
 Zeregin garestiaren emaitzak (segundoak)
 

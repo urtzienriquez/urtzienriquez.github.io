@@ -9,6 +9,8 @@ showPagination: false
 summary: >-
   Sarrera honek estatistika esploratzailearen alderdi batzuk eta
   hipotesi-kontrastearen oinarriak lantzen ditu
+categories:
+  - Programming
 tags:
   - Julia
   - data analyses

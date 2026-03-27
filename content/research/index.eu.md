@@ -17,6 +17,7 @@ showEdit: false
 showViews: false
 showLikes: false
 layoutBackgroundHeaderSpace: false
+categories: ["Research"]
 ---
 
 Ekologo fisiologiko eta ebolutiboa naiz, eta organismoek beren inguruneetan nabigatzeko eta irauteko dituzten moldapen fenotipikoak ulertzen dihardut. Nire ikerketa biologia esperimentalaren, makroeboluzioaren eta modelizazio konputazionalaren arteko bidegurutzean kokatzen da.

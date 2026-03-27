@@ -9,6 +9,8 @@ showPagination: false
 summary: >-
   This post touches some aspects of exploratory statistical analyses, as well as
   some basics of hypothesis testing
+categories:
+  - Programming
 tags:
   - Julia
   - data analyses
