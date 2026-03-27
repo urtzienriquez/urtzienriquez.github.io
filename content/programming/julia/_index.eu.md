@@ -3,7 +3,6 @@ title: "Julia Programazioa"
 description: "Julia erabiliz egindako datu-zientziako tutorialak eta txostenak."
 cardView: false
 showDescription: true
-sortOrder: "weight"
 ---
 
 Hona hemen `julia` programazio-lenguaia ikasten ari nintzen bitartean hartutako ohar batzuk. Tutorial hauek erabilgarriak izan daitezke, batez ere, R programazioan esperientzia dutenentzat. Tutorialak ikerketa-proiektu baten urratsak jarraituz antolatuta daude, baina baliteke ordena hori aldatzea tutorial hauetan lanean ari naizen heinean.

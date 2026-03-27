@@ -2,7 +2,6 @@
 title: Datuen analisia Julia-rekin
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-27
-weight: 30
 series: ["Julia Tutorialak"]
 series_order: 3
 showPagination: false

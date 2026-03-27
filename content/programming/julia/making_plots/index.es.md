@@ -2,7 +2,6 @@
 title: Creación de gráficos con Makie.jl
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-26T00:00:00.000Z
-weight: 20
 series:
   - Julia Tutoriales
 series_order: 2

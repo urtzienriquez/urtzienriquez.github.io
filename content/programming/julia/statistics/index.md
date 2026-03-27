@@ -2,7 +2,6 @@
 title: Data analysis in Julia
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-27T00:00:00.000Z
-weight: 30
 series:
   - Julia Tutorials
 series_order: 3

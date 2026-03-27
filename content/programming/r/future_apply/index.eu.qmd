@@ -2,7 +2,6 @@
 title: 'future.apply-rekin benchmarking-a egiten'
 author: 'Urtzi Enriquez-Urzelai'
 date: 2026-03-25
-weight: 10
 series: ["R Tutorialak"]
 series_order: 1
 showPagination: false

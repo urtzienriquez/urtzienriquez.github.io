@@ -2,7 +2,6 @@
 title: Making plots with Makie.jl
 author: Urtzi Enriquez-Urzelai
 date: 2025-03-26T00:00:00.000Z
-weight: 20
 series:
   - Julia Tutorials
 series_order: 2

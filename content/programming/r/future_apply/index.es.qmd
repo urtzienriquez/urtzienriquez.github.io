@@ -2,7 +2,6 @@
 title: 'Benchmarking de future.apply'
 author: 'Urtzi Enriquez-Urzelai'
 date: 2026-03-25
-weight: 10
 series: ["R Tutoriales"]
 series_order: 1
 showPagination: false

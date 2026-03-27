@@ -1,8 +1,7 @@
 ---
 title: Using DataFrames.jl
 author: Urtzi Enriquez-Urzelai
-date: 2026-03-25T00:00:00.000Z
-weight: 10
+date: 2025-03-25T00:00:00.000Z
 series:
   - Julia Tutorials
 series_order: 1

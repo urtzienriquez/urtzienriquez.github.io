@@ -2,7 +2,6 @@
 title: future.apply-rekin benchmarking-a egiten
 author: Urtzi Enriquez-Urzelai
 date: 2026-03-25T00:00:00.000Z
-weight: 10
 series:
   - R Tutorialak
 series_order: 1
@@ -52,10 +51,10 @@ kable(summary(bench_cheap), caption = "Zeregin merkearen emaitzak (milisegundoak
 ```
 
 | expr | min | lq | mean | median | uq | max | neval |
-|:------------|--------:|--------:|---------:|--------:|--------:|---------:|-----:|
-| for_loop | 1527.265 | 1634.641 | 1779.7843 | 1744.709 | 1914.875 | 2065.791 | 10 |
-| standard_apply | 596.950 | 601.254 | 729.8006 | 632.197 | 803.007 | 1238.508 | 10 |
-| future_apply | 43311.720 | 45430.723 | 68898.6957 | 60474.312 | 76580.966 | 132509.011 | 10 |
+|:------------|--------:|--------:|---------:|---------:|--------:|---------:|-----:|
+| for_loop | 1614.962 | 1719.768 | 1967.3372 | 1929.9275 | 2002.467 | 2563.996 | 10 |
+| standard_apply | 585.558 | 628.908 | 697.3279 | 651.5355 | 675.465 | 1167.510 | 10 |
+| future_apply | 43101.296 | 48744.515 | 75279.3288 | 74456.9755 | 92012.472 | 137779.228 | 10 |
 
 Zeregin merkearen emaitzak (milisegundoak)
 
@@ -99,9 +98,9 @@ kable(summary(bench_expensive), caption = "Zeregin garestiaren emaitzak (segundo
 
 | expr | min | lq | mean | median | uq | max | neval |
 |:------------|--------:|--------:|--------:|--------:|--------:|--------:|-----:|
-| for_loop | 2010.4344 | 2010.4344 | 2012.9175 | 2012.9175 | 2015.4007 | 2015.4007 | 2 |
-| standard_apply | 2007.5907 | 2007.5907 | 2008.0775 | 2008.0775 | 2008.5644 | 2008.5644 | 2 |
-| future_apply | 296.7501 | 296.7501 | 298.9791 | 298.9791 | 301.2081 | 301.2081 | 2 |
+| for_loop | 2009.2154 | 2009.2154 | 2011.1665 | 2011.1665 | 2013.1175 | 2013.1175 | 2 |
+| standard_apply | 2008.0596 | 2008.0596 | 2008.2003 | 2008.2003 | 2008.3409 | 2008.3409 | 2 |
+| future_apply | 291.1259 | 291.1259 | 293.0827 | 293.0827 | 295.0395 | 295.0395 | 2 |
 
 Zeregin garestiaren emaitzak (segundoak)
 
