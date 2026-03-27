@@ -1,0 +1,67 @@
+---
+title: ''
+date: 2026-03-25
+layout: 'single'
+# showAuthor: false
+heroStyle: 'background'
+showHero: true
+showDate: false
+showDateOnlyInArticle: false
+showDateUpdated: false
+showHeadingAnchors: false
+showPagination: false
+showReadingTime: false
+showTableOfContents: true
+showTaxonomies: false
+showWordCount: false
+showSummary: false
+sharingLinks: false
+showEdit: false
+showViews: false
+showLikes: false
+layoutBackgroundHeaderSpace: false
+---
+
+## Esperientzia
+
+{{< timeline >}}
+
+{{< timelineItem header="Ornodunen Biologia Institutua, Txekiako Zientzia Akademia" badge="2024-Gaur egun" subheader="Doktoretza ondoko ikertzailea" md=true >}}
+**Kokalekua:** Studenec, CZ — [Webgunea](https://www.ivb.cz/en/) 
+<img src="/resume/ivb.png" class="float-right ml-4 mb-2 h-14 rounded shadow-sm" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="x" header="Ornodunen Biologia Institutua, Txekiako Zientzia Akademia" badge="2020-2024" subheader="Doktoretza ondoko ikertzailea" md=true >}}
+**Kokalekua:** Studenec, CZ — [Webgunea](https://www.ivb.cz/en/) 
+<img src="/resume/ivb.png" class="float-right ml-4 mb-2 h-14 rounded shadow-sm" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="x" header="CIBIO" badge="2018-2020" subheader="Doktoretza ondoko ikertzailea" md=true >}}
+**Kokalekua:** Vairão, PT — [Webgunea](https://www.cibio.up.pt/en/) 
+<img src="/resume/cibio.jpg" class="float-right ml-4 mb-2 h-14 rounded shadow-sm" />
+{{< /timelineItem >}}
+
+{{< /timeline >}}
+
+<br>
+
+## Prestakuntza Akademikoa
+
+{{< timeline >}}
+
+{{< timelineItem icon="graduation-cap" header="Oviedoko Unibertsitatea" badge="2014-2018" subheader="BioGeozientzietan Doktorea" md=true >}}
+**Kokalekua:** Oviedo, ES — [Webgunea](https://biologia.uniovi.es/) 
+<img src="/resume/uniovi.png" class="float-right ml-4 mb-2 h-14 rounded shadow-sm" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="x" header="Bartzelonako Unibertsitatea" badge="2010-2011" subheader="Biodibertsitatean Masterra" md=true >}}
+**Kokalekua:** Bartzelona, ES — [Webgunea](https://www.ub.edu/portal/web/biologia/) 
+<img src="/resume/ub.jpg" class="float-right ml-4 mb-2 h-14 rounded shadow-sm" />
+{{< /timelineItem >}}
+
+{{< timelineItem icon="x" header="UPV / EHU" badge="2005-2010" subheader="Biologian Lizentziatua" md=true >}}
+**Kokalekua:** Bilbo, ES — [Webgunea](https://www.ehu.eus/eu/web/zientzia-teknologia-fakultatea) 
+<img src="/resume/upv.png" class="float-right ml-4 mb-2 h-14 rounded shadow-sm" />
+{{< /timelineItem >}}
+
+{{< /timeline >}}

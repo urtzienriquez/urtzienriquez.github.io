@@ -11,55 +11,55 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
- name = "Posts"
+ name = "Post-ak"
  pageRef = "posts"
  weight = 10
 
 [[main]]
-  name = "Resume"
+  name = "Kurrikuluma"
   pageRef = "resume"
   weight = 20
 
 [[main]]
-  name = "Research"
+  name = "Ikerkuntza"
   pageRef = "research"
   weight = 30
 
 [[main]]
-  name = "People"
+  name = "Jendea"
   pageRef = "people"
   weight = 40
 
 [[main]]
-  parent = "People"
-  name = "Collaborators"
+  parent = "Jendea"
+  name = "Kolaboratzaileak"
   pageRef = "collaborators"
   weight = 1
 
 [[main]]
-  parent = "People"
-  name = "Students"
+  parent = "Jendea"
+  name = "Ikasleak"
   pageRef = "students"
   weight = 2
 
 [[main]]
-  name = "Publications"
+  name = "Argitalpenak"
   pageRef = "publications"
   weight = 50
 
 [[main]]
-  name = "Programming"
+  name = "Programazioa"
   pageRef = "programming"
   weight = 60
 
 [[main]]
-  parent = "Programming"
+  parent = "Programazioa"
   name = "Julia"
   pageRef = "programming/julia"
   weight = 1
 
 [[main]]
-  parent = "Programming"
+  parent = "Programazioa"
   name = "R"
   pageRef = "programming/r"
   weight = 2

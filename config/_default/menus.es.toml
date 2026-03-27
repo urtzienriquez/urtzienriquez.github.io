@@ -23,12 +23,12 @@
 [[main]]
   name = "Investigación"
   pageRef = "research"
-  weight = 20
+  weight = 30
 
 [[main]]
   name = "Gente"
   pageRef = "people"
-  weight = 30
+  weight = 40
 
 [[main]]
   parent = "Gente"

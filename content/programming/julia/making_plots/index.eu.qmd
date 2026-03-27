@@ -1,0 +1,151 @@
+---
+title: Grafikoak Makie.jl-rekin egiten
+author: Urtzi Enriquez-Urzelai
+date: 2025-03-26
+weight: 20
+summary: "Julia-ko Makie esparruarekin grafikoak nola egin jakiteko ikuspegi orokorra"
+tags: ["Julia", "grafikoak", "datu-analisia"]
+format: hugo-md
+jupyter: julia-1.11
+---
+
+```{julia}
+using CairoMakie
+using RDatasets
+using DataFramesMeta: @with
+using CategoricalArrays: levelcode
+
+iris = dataset("datasets", "iris")
+typeof(iris)
+
+scatter(iris.SepalLength, iris.PetalLength)
+```
+
+```{julia}
+# Makie-ren oinarrizko egitura
+f = Figure();
+
+ax = Axis(f[1, 1],
+    xlabel="x ardatza",
+    ylabel="y ardatza",
+    title="Grafiko harrigarria")
+f
+```
+
+```{julia}
+# Marrekin grafikatzen
+x = LinRange(-10, 10, 1000)
+y = cos.(x)
+obj = lines(x, y)
+```
+
+```{julia}
+typeof(obj)
+```
+
+```{julia}
+# Panel berean grafikatzen
+fig, axs, plot = lines(x, y)
+lines!(axs, x, sin.(x))
+fig
+```
+
+```{julia}
+# Panel gehigarriak (ardatzak) sortzen
+fig, ax1, plot = lines(x, sin)
+ax2 = Axis(fig[2, 1])
+lines!(ax2, x, cos, color=:tomato)
+fig
+```
+
+```{julia}
+# Iris datu-multzoarekin probatzen
+fig_iris = Figure();
+ax_iris = Axis(fig_iris[1, 1],
+    xlabel="Petaloaren luzera",
+    ylabel="Petaloaren zabalera")
+
+colors_sp = [:red, :green, :purple]
+
+for (i, sp) in enumerate(unique(iris.Species))
+    index = findall(==(sp), iris.Species)
+    scatter!(ax_iris, iris.PetalLength[index], iris.PetalWidth[index],
+        color=colors_sp[i],
+        label=string(sp))
+end
+axislegend(framevisible=false, position=:lt, labelsize=10)
+```
+
+```{julia}
+ax2_iris = Axis(fig_iris[1, 2],
+    xlabel="Petaloaren luzera",
+    ylabel="Sepaloaren luzera")
+scatter!(ax2_iris, iris.PetalLength, iris.SepalLength,
+    color=levelcode.(iris.Species))
+
+linkyaxes!(ax_iris, ax2_iris)
+
+ax3_iris = Axis(fig_iris[2, :],
+    xlabel="Sepaloaren luzera",
+    ylabel="Sepaloaren zabalera")
+scatter!(ax3_iris, iris.SepalLength, iris.SepalWidth)
+
+fig_iris
+```
+
+```{julia}
+using ColorSchemes
+import ColorSchemes.viridis
+
+colors_sp = [viridis[0.0], viridis[0.5], viridis[1.0]]
+
+my_theme = Theme(
+    Axis = (
+        topspinevisible = false,
+        rightspinevisible = false,
+        ygridvisible = false,
+        xgridvisible = false,
+    )
+)
+
+@with iris begin
+    with_theme(my_theme) do
+        fig_iris = Figure()
+
+        ax_iris = Axis(fig_iris[1, 1],
+            xlabel="Petaloaren luzera",
+            ylabel="Petaloaren zabalera")
+        for (i, sp) in enumerate(unique(:Species))
+            index = findall(==(sp), :Species)
+            scatter!(ax_iris, :PetalLength[index], :PetalWidth[index],
+                color=colors_sp[i],
+                label=string(sp))
+
+        end
+        axislegend(framevisible=false, position=Symbol("lt"), labelsize=10)
+
+        ax2_iris = Axis(fig_iris[1, 2],
+            xlabel="Petaloaren luzera",
+            ylabel="Sepaloaren luzera")
+        for (i, sp) in enumerate(unique(:Species))
+            index = findall(==(sp), :Species)
+            scatter!(ax2_iris, :PetalLength[index], :SepalLength[index],
+                color=colors_sp[i],
+                label=string(sp))
+        end
+        linkyaxes!(ax_iris, ax2_iris)
+
+        ax3_iris = Axis(fig_iris[2, :],
+            xlabel="Sepaloaren luzera",
+            ylabel="Sepaloaren zabalera")
+        for (i, sp) in enumerate(unique(:Species))
+            index = findall(==(sp), :Species)
+            scatter!(ax3_iris, :SepalLength[index], :SepalWidth[index],
+                color=colors_sp[i],
+                label=string(sp))
+        end
+        
+        fig_iris
+    end
+end
+```

@@ -1,11 +1,11 @@
-languageCode = "es"
-languageName = "Español"
-weight = 3
+languageCode = "eu"
+languageName = "Euskara"
+weight = 2
 title = "Urtzi Enriquez-Urzelai"
 
 [params]
-  displayName = "Español"
-  isoCode = "es"
+  displayName = "Euskara"
+  isoCode = "eu"
   rtl = false
   dateFormat = "2 January 2006"
   logo = "img/logo.png"
@@ -19,7 +19,7 @@ title = "Urtzi Enriquez-Urzelai"
   image = "img/picture.jpg"
   imageQuality = 96
   # headline = "Physiology, ecology and modeling in a changing world"
-  bio = "Ecofisiólogo evolutivo"
+  bio = "Ekofisiologo ebolutiboa"
   links = [
     { email = "mailto:uenriquez@proton.me" },
     { google-scholar = "https://scholar.google.com/citations?user=4fPSob0AAAAJ&hl=en" },

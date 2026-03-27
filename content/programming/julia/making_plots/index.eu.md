@@ -1,0 +1,203 @@
+---
+title: Grafikoak Makie.jl-rekin egiten
+author: Urtzi Enriquez-Urzelai
+date: 2025-03-26T00:00:00.000Z
+weight: 20
+summary: Julia-ko Makie esparruarekin grafikoak nola egin jakiteko ikuspegi orokorra
+tags:
+  - Julia
+  - grafikoak
+  - datu-analisia
+format: hugo-md
+jupyter: julia-1.11
+---
+
+
+``` julia
+using CairoMakie
+using RDatasets
+using DataFramesMeta: @with
+using CategoricalArrays: levelcode
+
+iris = dataset("datasets", "iris")
+typeof(iris)
+
+scatter(iris.SepalLength, iris.PetalLength)
+```
+
+<pre><span class="ansi-yellow-fg ansi-bold">┌ </span><span class="ansi-yellow-fg ansi-bold">Warning: </span>Found `resolution` in the theme when creating a `Scene`. The `resolution` keyword for `Scene`s and `Figure`s has been deprecated. Use `Figure(; size = ...` or `Scene(; size = ...)` instead, which better reflects that this is a unitless size and not a pixel resolution. The key could also come from `set_theme!` calls or related theming functions.
+
+<span class="ansi-yellow-fg ansi-bold">└ </span><span class="ansi-bright-black-fg">@ Makie ~/.julia/packages/Makie/kJl0u/src/scenes.jl:264</span>
+</pre>
+
+![](index.eu_files/figure-markdown_strict/cell-2-output-2.svg)
+
+``` julia
+# Makie-ren oinarrizko egitura
+f = Figure();
+
+ax = Axis(f[1, 1],
+    xlabel="x ardatza",
+    ylabel="y ardatza",
+    title="Grafiko harrigarria")
+f
+```
+
+<pre><span class="ansi-yellow-fg ansi-bold">┌ </span><span class="ansi-yellow-fg ansi-bold">Warning: </span>Found `resolution` in the theme when creating a `Scene`. The `resolution` keyword for `Scene`s and `Figure`s has been deprecated. Use `Figure(; size = ...` or `Scene(; size = ...)` instead, which better reflects that this is a unitless size and not a pixel resolution. The key could also come from `set_theme!` calls or related theming functions.
+
+<span class="ansi-yellow-fg ansi-bold">└ </span><span class="ansi-bright-black-fg">@ Makie ~/.julia/packages/Makie/kJl0u/src/scenes.jl:264</span>
+</pre>
+
+![](index.eu_files/figure-markdown_strict/cell-3-output-2.svg)
+
+``` julia
+# Marrekin grafikatzen
+x = LinRange(-10, 10, 1000)
+y = cos.(x)
+obj = lines(x, y)
+```
+
+<pre><span class="ansi-yellow-fg ansi-bold">┌ </span><span class="ansi-yellow-fg ansi-bold">Warning: </span>Found `resolution` in the theme when creating a `Scene`. The `resolution` keyword for `Scene`s and `Figure`s has been deprecated. Use `Figure(; size = ...` or `Scene(; size = ...)` instead, which better reflects that this is a unitless size and not a pixel resolution. The key could also come from `set_theme!` calls or related theming functions.
+
+<span class="ansi-yellow-fg ansi-bold">└ </span><span class="ansi-bright-black-fg">@ Makie ~/.julia/packages/Makie/kJl0u/src/scenes.jl:264</span>
+</pre>
+
+![](index.eu_files/figure-markdown_strict/cell-4-output-2.svg)
+
+``` julia
+typeof(obj)
+```
+
+    Makie.FigureAxisPlot
+
+``` julia
+# Panel berean grafikatzen
+fig, axs, plot = lines(x, y)
+lines!(axs, x, sin.(x))
+fig
+```
+
+<pre><span class="ansi-yellow-fg ansi-bold">┌ </span><span class="ansi-yellow-fg ansi-bold">Warning: </span>Found `resolution` in the theme when creating a `Scene`. The `resolution` keyword for `Scene`s and `Figure`s has been deprecated. Use `Figure(; size = ...` or `Scene(; size = ...)` instead, which better reflects that this is a unitless size and not a pixel resolution. The key could also come from `set_theme!` calls or related theming functions.
+
+<span class="ansi-yellow-fg ansi-bold">└ </span><span class="ansi-bright-black-fg">@ Makie ~/.julia/packages/Makie/kJl0u/src/scenes.jl:264</span>
+</pre>
+
+![](index.eu_files/figure-markdown_strict/cell-6-output-2.svg)
+
+``` julia
+# Panel gehigarriak (ardatzak) sortzen
+fig, ax1, plot = lines(x, sin)
+ax2 = Axis(fig[2, 1])
+lines!(ax2, x, cos, color=:tomato)
+fig
+```
+
+<pre><span class="ansi-yellow-fg ansi-bold">┌ </span><span class="ansi-yellow-fg ansi-bold">Warning: </span>Found `resolution` in the theme when creating a `Scene`. The `resolution` keyword for `Scene`s and `Figure`s has been deprecated. Use `Figure(; size = ...` or `Scene(; size = ...)` instead, which better reflects that this is a unitless size and not a pixel resolution. The key could also come from `set_theme!` calls or related theming functions.
+
+<span class="ansi-yellow-fg ansi-bold">└ </span><span class="ansi-bright-black-fg">@ Makie ~/.julia/packages/Makie/kJl0u/src/scenes.jl:264</span>
+</pre>
+
+![](index.eu_files/figure-markdown_strict/cell-7-output-2.svg)
+
+``` julia
+# Iris datu-multzoarekin probatzen
+fig_iris = Figure();
+ax_iris = Axis(fig_iris[1, 1],
+    xlabel="Petaloaren luzera",
+    ylabel="Petaloaren zabalera")
+
+colors_sp = [:red, :green, :purple]
+
+for (i, sp) in enumerate(unique(iris.Species))
+    index = findall(==(sp), iris.Species)
+    scatter!(ax_iris, iris.PetalLength[index], iris.PetalWidth[index],
+        color=colors_sp[i],
+        label=string(sp))
+end
+axislegend(framevisible=false, position=:lt, labelsize=10)
+```
+
+<pre><span class="ansi-yellow-fg ansi-bold">┌ </span><span class="ansi-yellow-fg ansi-bold">Warning: </span>Found `resolution` in the theme when creating a `Scene`. The `resolution` keyword for `Scene`s and `Figure`s has been deprecated. Use `Figure(; size = ...` or `Scene(; size = ...)` instead, which better reflects that this is a unitless size and not a pixel resolution. The key could also come from `set_theme!` calls or related theming functions.
+
+<span class="ansi-yellow-fg ansi-bold">└ </span><span class="ansi-bright-black-fg">@ Makie ~/.julia/packages/Makie/kJl0u/src/scenes.jl:264</span>
+</pre>
+
+    Legend()
+
+``` julia
+ax2_iris = Axis(fig_iris[1, 2],
+    xlabel="Petaloaren luzera",
+    ylabel="Sepaloaren luzera")
+scatter!(ax2_iris, iris.PetalLength, iris.SepalLength,
+    color=levelcode.(iris.Species))
+
+linkyaxes!(ax_iris, ax2_iris)
+
+ax3_iris = Axis(fig_iris[2, :],
+    xlabel="Sepaloaren luzera",
+    ylabel="Sepaloaren zabalera")
+scatter!(ax3_iris, iris.SepalLength, iris.SepalWidth)
+
+fig_iris
+```
+
+![](index.eu_files/figure-markdown_strict/cell-9-output-1.svg)
+
+``` julia
+using ColorSchemes
+import ColorSchemes.viridis
+
+colors_sp = [viridis[0.0], viridis[0.5], viridis[1.0]]
+
+my_theme = Theme(
+    Axis = (
+        topspinevisible = false,
+        rightspinevisible = false,
+        ygridvisible = false,
+        xgridvisible = false,
+    )
+)
+
+@with iris begin
+    with_theme(my_theme) do
+        fig_iris = Figure()
+
+        ax_iris = Axis(fig_iris[1, 1],
+            xlabel="Petaloaren luzera",
+            ylabel="Petaloaren zabalera")
+        for (i, sp) in enumerate(unique(:Species))
+            index = findall(==(sp), :Species)
+            scatter!(ax_iris, :PetalLength[index], :PetalWidth[index],
+                color=colors_sp[i],
+                label=string(sp))
+
+        end
+        axislegend(framevisible=false, position=Symbol("lt"), labelsize=10)
+
+        ax2_iris = Axis(fig_iris[1, 2],
+            xlabel="Petaloaren luzera",
+            ylabel="Sepaloaren luzera")
+        for (i, sp) in enumerate(unique(:Species))
+            index = findall(==(sp), :Species)
+            scatter!(ax2_iris, :PetalLength[index], :SepalLength[index],
+                color=colors_sp[i],
+                label=string(sp))
+        end
+        linkyaxes!(ax_iris, ax2_iris)
+
+        ax3_iris = Axis(fig_iris[2, :],
+            xlabel="Sepaloaren luzera",
+            ylabel="Sepaloaren zabalera")
+        for (i, sp) in enumerate(unique(:Species))
+            index = findall(==(sp), :Species)
+            scatter!(ax3_iris, :SepalLength[index], :SepalWidth[index],
+                color=colors_sp[i],
+                label=string(sp))
+        end
+        
+        fig_iris
+    end
+end
+```
+
+![](index.eu_files/figure-markdown_strict/cell-10-output-1.svg)

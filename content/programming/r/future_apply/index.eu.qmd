@@ -1,0 +1,95 @@
+---
+title: 'future.apply-rekin benchmarking-a egiten'
+author: 'Urtzi Enriquez-Urzelai'
+date: 2026-03-25
+weight: 10
+summary: 'For-loop-ak oso erabiliak dira zereginak seriean egiteko. Hala ere, "apply" familiako funtzioek eta esparru berri batek (future.apply) zeregin horiek paraleloan egitea ahalbidetzen dute, eta hori for-loop klasikoa baino eraginkorragoa izan daiteke R-n.'
+tags: ['R', 'programazioa', 'begiztak', 'paralelizazioa']
+format: hugo-md
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(future.apply)
+library(microbenchmark)
+library(ggplot2)
+library(knitr)
+
+# Langile paraleloak konfiguratu
+plan(multisession, workers = parallel::detectCores() - 1)
+```
+
+## Hiru Lehian kideak
+
+1. **`for` begizta estandarra**: Eskuzko iterazioa (aurre-esleitua).
+2. **`lapply`**: R-ko estandar funtzional eta sekuentziala.
+3. **`future_lapply`**: Bertsio paralelizatua.
+
+---
+
+## 1. Esperimentua: Zeregin "Merkea"
+
+Eszenatoki honetan, oso azkar egiten den zerbait egingo dugu: 1.000 zenbakiren batez bestekoa kalkulatu.
+
+```{r}
+#| label: cheap_benchmark
+#| warning: false
+
+n <- 200
+data_list <- replicate(n, rnorm(1000), simplify = FALSE)
+
+bench_cheap <- microbenchmark(
+  for_loop = {
+    res_for <- vector("list", n)
+    for (i in 1:n) res_for[[i]] <- mean(data_list[[i]])
+  },
+  standard_apply = lapply(data_list, mean),
+  future_apply = future_lapply(data_list, mean),
+  times = 10
+)
+
+# Taula sortu
+kable(summary(bench_cheap), caption = "Zeregin merkearen emaitzak (milisegundoak)")
+
+# Irudia sortu
+autoplot(bench_cheap) +
+  labs(title = "Zeregin merkea: Paralelizazioaren gainkarga nabaria da")
+```
+
+---
+
+## 2. Esperimentua: Zeregin "Garestia"
+
+Eszenatoki honetan, lan "astun" bat simulatuko dugu atzerapen txiki bat gehituz (`Sys.sleep`). Horrek modelizazio estatistiko konplexu bat edo web scraping-a imitatzen du.
+
+```{r}
+#| label: expensive_benchmark
+#| warning: false
+
+n_heavy <- 20
+data_heavy <- replicate(n_heavy, rnorm(10), simplify = FALSE)
+
+# Deialdi bakoitzeko 0,1 segundo ematen dituen funtzioa
+heavy_func <- function(x) {
+  Sys.sleep(0.1)
+  mean(x)
+}
+
+bench_expensive <- microbenchmark(
+  for_loop = {
+    res_for <- vector("list", n_heavy)
+    for (i in 1:n_heavy) res_for[[i]] <- heavy_func(data_heavy[[i]])
+  },
+  standard_apply = lapply(data_heavy, heavy_func),
+  future_apply = future_lapply(data_heavy, heavy_func),
+  times = 2 # Iterazio gutxi, motela baita!
+)
+
+# Taula sortu
+kable(summary(bench_expensive), caption = "Zeregin garestiaren emaitzak (segundoak)")
+
+# Irudia sortu
+autoplot(bench_expensive) +
+  labs(title = "Zeregin garestia: Future-k alde handiz irabazten du")
+```

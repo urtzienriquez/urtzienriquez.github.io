@@ -1,0 +1,91 @@
+---
+title: DataFrames.jl erabiltzen
+author: Urtzi Enriquez-Urzelai
+date: 2026-03-25
+weight: 10
+summary: "Julia-ko DataFrames paketea erabiltzeko sarrera labur-laburra"
+tags: ["Julia", "dataframes", "datu-analisia"]
+format: hugo-md
+jupyter: julia-1.11
+---
+
+Adibide honetan, internetetik deskargatutako munduko herrialdeen populazio-datuekin egingo dut lan. Ikasgai hau YouTubeko bideo batean [^1] oinarrituta dago.
+
+## Datuak inportatzen
+
+```{julia}
+using DataFrames
+using CSV
+
+wp = DataFrame(CSV.File("./world_pop.csv"))
+first(wp, 5)
+```
+
+```{julia}
+describe(wp)
+```
+
+```{julia}
+names(wp)
+```
+
+## Datuen eraldaketa (Data wrangling)
+
+```{julia}
+wp.id = 1:nrow(wp)
+first(wp, 5)
+```
+
+```{julia}
+colnames = [:country, :pop2024, :pop2023, :area, :density, :growth_rate, :world_perc, :world_rank, :id]
+rename!(wp, colnames)
+describe(wp)
+```
+
+```{julia}
+wp_clean = select!(wp, :id, :country, :pop2024, :growth_rate);
+```
+
+Kontuz ibili, harridura-markak (`!`) jatorrizko taula ere aldatzen baitu! Gogoratu **ez** garela kopiak egiten ari, memoriako objektu berberetara zuzentzen duten erakusle (pointer) berriak sortzen baizik.
+
+```{julia}
+describe(wp_clean)
+```
+
+```{julia}
+describe(wp)
+```
+
+## Azpimultzoak hautatzea (Subsetting)
+
+Kate bat (adibidez, herrialde baten izena) edo balio bat presente dagoen egiaztatzeko `in` operadorea erabili daiteke.
+
+```{julia}
+"Tanzania" in wp.country
+```
+
+Herrialde zehatz bat zein indizetan dagoen jakiteko `findall()` edo `findfirst()` funtzioak erabili ditzakegu.
+
+```{julia}
+# funtzio anonimoekin
+findall(x -> x == "Tanzania", wp.country)
+
+# edo == funtzioa erabiliz
+findall(==("Tanzania"), wp.country)
+```
+
+Horrek gure dataframe-aren azpimultzoak hainbat modutan hautatzeko aukera ematen digu:
+
+```{julia}
+# findall() edo findfirst() erabiliz
+wp[findall(==("Tanzania"), wp.country), :]
+```
+
+```{julia}
+# edo "broadcasting" bidez, R-ko sintaxiaren antzera
+wp[wp.country .== "Tanzania", :]
+```
+
+`wp.country .== "Tanzania"` adierazpenak `0` eta `1` balioez osatutako bektore bat itzultzen du, eta bektore hori errenkadak hautatzeko erabiltzen da.
+
+[^1]: YouTube bideo [honetan](https://www.youtube.com/watch?v=TGFNEwVB9DU&list=PLhQ2JMBcfAsjZTA8_jGhz3BVqYgOeyyeu&index=7) oinarrituta.

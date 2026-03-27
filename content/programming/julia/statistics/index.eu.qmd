@@ -1,0 +1,120 @@
+---
+title: Datuen analisia Julia-rekin
+author: Urtzi Enriquez-Urzelai
+date: 2025-03-27
+weight: 30
+summary: "Sarrera honek estatistika esploratzailearen alderdi batzuk eta hipotesi-kontrastearen oinarriak lantzen ditu"
+tags: ["Julia", "datu-analisia", "estatistika"]
+format: hugo-md
+jupyter: julia-1.11
+---
+
+## Datuak inportatzen
+
+Lehenengo adibide honetan, beste ikastaro baterako (git ikastaroa) deskargatu nuen Iris datu-multzoa inportatuko dugu. Horretarako, nahikoa da hau egitea:
+
+```{julia}
+using DataFrames, DataFramesMeta
+using RDatasets
+using CategoricalArrays
+
+iris = dataset("datasets", "iris")
+#=iris[!, :Species] = categorical(iris[!, :Species])=#
+first(iris, 5)
+```
+
+## Oinarrizko grafikoak
+
+Hona hemen espezie bakoitzeko sepaloaren luzera erakusten duen boxplot (kutxa-diagrama) sinple bat:
+
+```{julia}
+using StatsPlots: boxplot
+boxplot(iris.Species, iris.SepalLength)
+```
+
+```{julia}
+using CairoMakie
+fig, ax, plot = scatter(iris.PetalLength, iris.SepalLength, 
+                        color=levelcode.(iris.Species))
+ax2 = Axis(fig[1,2])
+scatter!(ax2, iris.PetalLength, iris.PetalWidth,
+         color = levelcode.(iris.Species))
+fig
+```
+
+## Osagai Nagusien Analisia (PCA)
+
+```{julia}
+using MultivariateStats
+X = Matrix(iris[:, Not(:Species)])'
+y = iris.Species
+species = unique(iris.Species)
+
+model = fit(PCA, X; maxoutdim = size(X)[1])
+```
+
+```{julia}
+X_transform = MultivariateStats.transform(model, X)'
+X_df = DataFrame(Matrix(X_transform), :auto)
+rename!(X_df, :x1 => :PC1, :x2 => :PC2, :x3 => :PC3)
+X_df.Species = iris.Species;
+```
+
+```{julia}
+fig_pca = Figure();
+ax_pca = Axis(fig_pca[1, 1],
+              xlabel = "PC1",
+              ylabel = "PC2")
+@with X_df begin
+    scatter!(ax_pca, :PC1, :PC2, 
+             color = levelcode.(:Species),
+             label = levelcode.(:Species))
+end
+fig_pca
+```
+
+## Oinarrizko inferentzia: eredu lineal baten ANOVA
+
+```{julia}
+using AnovaGLM
+aovlm = anova_lm(@formula(SepalLength ~ PetalLength * Species), iris)
+```
+
+## Erregresio-lerroak gehitzen
+
+```{julia}
+using ColorSchemes
+import ColorSchemes.viridis
+
+lmmod = lm(@formula(SepalLength ~ PetalLength), iris)
+lmmod_gp = lm(@formula(SepalLength ~ PetalLength * Species), iris)
+gp_mod_coef = coef(lmmod_gp)
+
+fig = Figure()
+ax = Axis(fig[1, 1],
+          xlabel = "Petaloaren luzera",
+          ylabel = "Petaloaren zabalera")
+scatter!(iris.PetalLength, iris.SepalLength, 
+         color=levelcode.(iris.Species));
+lines!(ax, 
+       iris.PetalLength, 
+       predict(lmmod), 
+       linewidth = 2,
+       color = :black)
+ablines!(gp_mod_coef[1],
+       gp_mod_coef[2],
+       linewidth = 2,
+       linestyle = :dash,
+          color = viridis[0.0])
+ablines!(gp_mod_coef[1] + gp_mod_coef[3],
+       gp_mod_coef[2] + gp_mod_coef[5],
+       linewidth = 2,
+       linestyle = :dash,
+          color = viridis[0.5])
+ablines!(gp_mod_coef[1] + gp_mod_coef[4],
+       gp_mod_coef[2] + gp_mod_coef[6],
+       linewidth = 2,
+       linestyle = :dash,
+          color = viridis[1.0])
+fig
+```
