@@ -28,12 +28,12 @@ Espezieak bizi diren lekuan zergatik bizi diren azaltzen saiatzen naiz, datu mik
 
 ### Fenotipoen eta Banaketa-eremuen Makroeboluzioa
 
-<figure style="width: 100%; margin: 0;">
-  <img src="/img/pictures/macroevo.jpg" style="width: 100%;" alt="Makroeboluzio-diagramaren deskribapen zehatza">
-  <figcaption style="text-align: center;">
-    1. irudia: <i>Rana</i> generoko igelen nitxo klimatikoen eboluzioa denbora luzean zehar. Egilea: Helena Martínez-Gil
-  </figcaption>
-</figure>
+{{< figure 
+    src="/img/pictures/macroevo.jpg" 
+    alt="Detailed description of the macroevolution plot" 
+    caption="Figure 1: Evolution of climatic niches in *Rana* frogs over deep time. Author: Helena Martínez-Gil" 
+    class="w-100"
+>}}
 
 Espezieen ezaugarriak eta nitxo klimatikoak denbora luzean zehar nola eboluzionatzen duten aztertzen dut, metodo konparatibo filogenetikoak erabiliz. Nire lanak historia biogeografikoaren, nitxoaren eboluzioaren eta linuen dibertsifikazioaren arteko loturak esploratzen ditu. Ikerketa honen ardatz garrantzitsu bat "arau ekogeografikoen" unibertsaltasuna (adibidez, Bergmann eta Allen-en arauak) frogatzea da.
 

@@ -29,12 +29,12 @@ Busco explicar por qué las especies viven donde viven integrando datos micro y 
 
 ### Macroevolución de fenotipos y rangos de distribución
 
-<figure style="width: 100%; margin: 0;">
-  <img src="/img/pictures/macroevo.jpg" style="width: 100%;" alt="Descripción de la figura">
-  <figcaption style="text-align: center;">
-    Figura 1: Evolución de los nichos climáticos en ranas del género <i>Rana</i> a lo largo del tiempo profundo. Autora: Helena Martínez-Gil.
-  </figcaption>
-</figure>
+{{< figure 
+    src="/img/pictures/macroevo.jpg" 
+    alt="Detailed description of the macroevolution plot" 
+    caption="Figure 1: Evolution of climatic niches in *Rana* frogs over deep time. Author: Helena Martínez-Gil" 
+    class="w-100"
+>}}
 
 Investigo cómo evolucionan los rasgos de las especies y sus nichos climáticos a lo largo del tiempo profundo mediante métodos filogenéticos comparativos. Mi trabajo explora los vínculos entre la historia biogeográfica, la evolución del nicho y la diversificación de linajes. Un enfoque significativo de esta investigación es poner a prueba la universalidad de las "reglas ecogeográficas" (como las reglas de Bergmann y Allen).
 

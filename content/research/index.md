@@ -29,12 +29,12 @@ I seek to explain why species live where they do by integrating micro- and macro
 
 ### Macroevolution of Phenotypes and Ranges
 
-<figure style="width: 100%; margin: 0;">
-  <img src="/img/pictures/macroevo.jpg" style="width: 100%;" alt="Detailed description of the macroevolution plot">
-  <figcaption style="text-align: center;">
-    Figure 1: Evolution of climatic niches in <i>Rana</i> frogs over deep time. Author: Helena Martínez-Gil
-  </figcaption>
-</figure>
+{{< figure 
+    src="/img/pictures/macroevo.jpg" 
+    alt="Detailed description of the macroevolution plot" 
+    caption="Figure 1: Evolution of climatic niches in *Rana* frogs over deep time. Author: Helena Martínez-Gil" 
+    class="w-100"
+>}}
 
 I investigate how species' traits and climatic niches evolve over deep time using phylogenetic comparative methods. My work explores the links between biogeographic history, niche evolution, and lineage diversification. A significant focus of this research is testing the universality of "ecogeographical rules" (such as Bergmann’s and Allen’s rules).
 
