@@ -24,6 +24,17 @@ categories: ["People"]
 ---
 <div class="space-y-8">
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+    <img src="/img/people/lumir.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Lumir Gvozdik" />
+    <div>
+      <h3 class="text-xl font-bold mb-1">Lumír Gvoždík</h3>
+      <p class="text-base mb-1"> Lumír es investigador senior en el Instituto de Biología de Vertebrados, República Checa, especializado en ecología térmica. Su investigación explora procesos poco estudiados e interacciones complejas entre respuestas fisiológicas y ecológicas. Al examinar los efectos combinados de múltiples factores de estrés, busca descubrir los mecanismos mediante los cuales el cambio climático moldea la dinámica de las poblaciones de ectotermos.</p>
+      <div class="flex gap-4">
+        <a href="https://www.ivb.cz/staff-lumir-gvozdik.html" target="_blank" class="text-primary-500 hover:underline">Sitio web</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
     <img src="/img/people/antigoni.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Antigoni Kaliontzopoulou" />
     <div>
       <h3 class="text-xl font-bold mb-1">Antigoni Kaliontzopoulou</h3>

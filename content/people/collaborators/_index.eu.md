@@ -25,6 +25,17 @@ categories: ["People"]
 
 <div class="space-y-8">
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+    <img src="/img/people/lumir.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Lumir Gvozdik" />
+    <div>
+      <h3 class="text-xl font-bold mb-1">Lumír Gvoždík</h3>
+      <p class="text-base mb-1"> Lumír ikertzaile nagusia da Txekiar Errepublikako Ornodunen Biologia Institutuan, ekologia termikoan espezializatua. Bere ikerketak gutxi aztertutako prozesuak eta erantzun fisiologikoen eta ekologikoen arteko elkarrekintza konplexuak aztertzen ditu. Estres-faktore anitzen eragin bateratuak aztertuz, klima-aldaketak ektotermoen populazio-dinamikan nola eragiten duen azaltzen duten mekanismoak argitu nahi ditu.</p>
+      <div class="flex gap-4">
+        <a href="https://www.ivb.cz/staff-lumir-gvozdik.html" target="_blank" class="text-primary-500 hover:underline">Webgunea</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
     <img src="/img/people/antigoni.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Antigoni Kaliontzopoulou" />
     <div>
       <h3 class="text-xl font-bold mb-1">Antigoni Kaliontzopoulou</h3>
