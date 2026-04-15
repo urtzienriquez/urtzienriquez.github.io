@@ -25,6 +25,8 @@ categories: ["Publications"]
 
 ### 2026
 
+Limnios, A., Boratyński, Z., **Enriquez-Urzelai, U.**, Pafilis, P., Charles, S., Simbula, G., & Carretero, M. A. (2026). Combined effects of glyphosate and ambient temperature on the energy management of a lizard: evidence from a controlled exposure study. Environmental Research, **300**, 124415. <a href="https://www.sciencedirect.com/science/article/pii/S0013935126007462?ssrnid=6122887&dgcid=SSRN_redirect_SD" target="_blank" class="text-primary-500 hover:underline">link</a>
+
 Puig, C. R., Kaliontzopoulou, A., Sillero, N., & **Enriquez-Urzelai, U.** (2026). Physiology–microhabitat matching may help organisms cope with the thermal and hydric challenges under climate change: a tale of two lizards. Ecography, e08337. <a href="https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1002/ecog.08337" target="_blank" class="text-primary-500 hover:underline">link</a>
 
 ### 2025
