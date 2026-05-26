@@ -23,7 +23,7 @@ At its core, this field is about the **energy (or better, heat) budget**. For an
 To understand how an organism interacts with its environment, we use the steady-state energy balance equation. In the framework of Porter and Kearney, we view the animal as a thermodynamic system:
 
 $$
-Q_{abs} + Q_{gen} = Q_{out} + Q_{conv} + Q_{evap} + Q_{cond} + S
+Q_{abs} + Q_{gen} = Q_{out} + Q_{conv} + Q_{evap} + Q_{cond} + Q_{resp} + S
 $$
 
 ### Variable Definitions:
@@ -33,7 +33,8 @@ $$
 * **\(Q_{conv}\)**: Convective heat exchange with the fluid (air/water)
 * **\(Q_{evap}\)**: Latent heat loss through evaporation
 * **\(Q_{cond}\)**: Conductive exchange with the substrate
-* **\(S\)**: Heat storage (Rate of temperature change)
+* **\(Q_{resp}\)**: Respiratory heat loss (evaporative + convective from the lungs)
+* **\(S\)**: Heat storage (\(S = c_p M \, dT_b/dt\); zero at steady state)
 
 For an animal to maintain a stable body temperature, **\(S\) must be zero**. Let’s break down the main heat transfer mechanisms that get us there.
 
@@ -51,6 +52,7 @@ $$
 * **\(k_{sub}\)**: Thermal conductivity of the substrate.
 * **\(A_{contact}\)**: Surface area in contact with the ground.
 * **\(T_s - T_{sub}\)**: Temperature gradient between the surface and the substrate.
+* **\(z\)**: Conduction depth — thickness of the substrate layer through which heat travels.
 
 **Ectotherm Strategy:** To warm up quickly, lizards increase their contact area (\(A_{contact}\)) by flattening their bodies against warm rocks. To cool down, they might stand high on their legs ("stilting") to create a gap of air.
 
@@ -95,9 +97,10 @@ This is the big one. Ectotherms are primarily "solar-powered." They absorb short
 The energy emitted by an organism is defined by the **Stefan-Boltzmann Law**:
 
 $$
-Q_{out} = \epsilon \sigma T_s^4
+Q_{out} = A \epsilon \sigma T_s^4
 $$
 
+* **\(A\)**: Radiative surface area (m²).
 * **\(\epsilon\)**: Emissivity (how "black" the object is in the infrared spectrum).
 * **\(\sigma\)**: Stefan-Boltzmann constant (\(5.67 \times 10^{-8} W m^{-2} K^{-4}\)).
 * **\(T_s\)**: Surface temperature in Kelvin.

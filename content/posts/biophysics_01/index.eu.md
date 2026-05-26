@@ -23,7 +23,7 @@ Funtsean, arlo honek **energia-balantzea (edo, hobeto esanda, bero-balantzea)** 
 Organismo batek bere ingurunearekin nola jokatzen duen ulertzeko, egoera egonkorreko energia-balantzearen ekuazioa erabiltzen dugu. Porter eta Kearney-ren esparruan, animalia sistema termodinamiko gisa ikusten dugu:
 
 $$
-Q_{abs} + Q_{gen} = Q_{out} + Q_{conv} + Q_{evap} + Q_{cond} + S
+Q_{abs} + Q_{gen} = Q_{out} + Q_{conv} + Q_{evap} + Q_{cond} + Q_{resp} + S
 $$
 
 ### Aldagaien definizioak:
@@ -33,7 +33,8 @@ $$
 * **\(Q_{conv}\)**: Fluidoarekin (airea/ura) konbekzio bidezko bero-trukea
 * **\(Q_{evap}\)**: lurruntze bidezko bero-galera latentea
 * **\(Q_{cond}\)**: Sustratuarekiko kondukzio bidezko trukea
-* **\(S\)**: Bero-biltegiratzea (tenperatura-aldaketaren tasa)
+* **\(Q_{resp}\)**: Arnasketa-bero galera (lurrunketa + konbekzioa biriketatik)
+* **\(S\)**: Bero-biltegiratzea (\(S = c_p M \, dT_b/dt\); zero egoera egonkorrean)
 
 Animalia batek gorputz-tenperatura egonkorra mantentzeko, **\(S\) zero izan behar da**. Azter ditzagun puntu horretara eramaten gaituzten bero-transferentziako mekanismo nagusiak.
 
@@ -51,6 +52,7 @@ $$
 * **\(k_{sub}\)**: Sustratuaren konduktibitate termikoa.
 * **\(A_{contact}\)**: Lurrarekin kontaktuan dagoen gainazal-eremua.
 * **\(T_s - T_{sub}\)**: Gainazalaren eta sustratuaren arteko tenperatura-gradientea.
+* **\(z\)**: Kondukzio-sakonera — beroa bidaiatzen duen sustrato-geruzaren lodiera.
 
 **Ektotermoaren estrategia:** Azkar berotzeko, muskerrek kontaktu-eremua (\(A_{contact}\)) handitzen dute gorputza harri beroen kontra zapalduz. Hozteko, ordea, hanka gainean altxa daitezke ("stilting") aire-tarte bat sortzeko.
 
@@ -95,9 +97,10 @@ Hau da faktore garrantzitsuena. Ektotermoak, batez ere, "eguzki-energiaz" dabilt
 Organismo batek igortzen duen energia **Stefan-Boltzmann-en Legeak** definitzen du:
 
 $$
-Q_{out} = \epsilon \sigma T_s^4
+Q_{out} = A \epsilon \sigma T_s^4
 $$
 
+* **\(A\)**: Erradiazio-gainazalaren eremua (m²).
 * **\(\epsilon\)**: Emisibitatea (objektua infragorriaren espektroan zein "beltza" den).
 * **\(\sigma\)**: Stefan-Boltzmann-en konstantea (\(5.67 \times 10^{-8} W m^{-2} K^{-4}\)).
 * **\(T_s\)**: Gainazaleko tenperatura Kelvin unitatetan.

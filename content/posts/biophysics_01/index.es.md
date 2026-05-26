@@ -23,7 +23,7 @@ En su esencia, este campo trata sobre el **balance de energía (o mejor dicho, d
 Para entender cómo interactúa un organismo con su entorno, utilizamos la ecuación del balance energético en estado estacionario. Bajo el marco de Porter y Kearney, vemos al animal como un sistema termodinámico:
 
 $$
-Q_{abs} + Q_{gen} = Q_{out} + Q_{conv} + Q_{evap} + Q_{cond} + S
+Q_{abs} + Q_{gen} = Q_{out} + Q_{conv} + Q_{evap} + Q_{cond} + Q_{resp} + S
 $$
 
 ### Definición de variables:
@@ -33,7 +33,8 @@ $$
 * **\(Q_{conv}\)**: Intercambio de calor por convección con el fluido (aire/agua)
 * **\(Q_{evap}\)**: Pérdida de calor latente por evaporación
 * **\(Q_{cond}\)**: Intercambio por conducción con el sustrato
-* **\(S\)**: Almacenamiento de calor (tasa de cambio de temperatura)
+* **\(Q_{resp}\)**: Pérdida de calor respiratorio (evaporativa + convectiva de los pulmones)
+* **\(S\)**: Almacenamiento de calor (\(S = c_p M \, dT_b/dt\); cero en estado estacionario)
 
 Para que un animal mantenga una temperatura corporal estable, **\(S\) debe ser cero**. Analicemos los principales mecanismos de transferencia de calor que nos llevan a ese punto.
 
@@ -51,6 +52,7 @@ $$
 * **\(k_{sub}\)**: Conductividad térmica del sustrato.
 * **\(A_{contact}\)**: Área superficial en contacto con el suelo.
 * **\(T_s - T_{sub}\)**: Gradiente de temperatura entre la superficie y el sustrato.
+* **\(z\)**: Profundidad de conducción — espesor del sustrato a través del cual viaja el calor.
 
 **Estrategia ectoterma:** Para calentarse rápido, las lagartijas aumentan su área de contacto (\(A_{contact}\)) aplanando sus cuerpos contra las rocas cálidas. Para enfriarse, pueden elevarse sobre sus patas ("stilting") para crear un espacio de aire.
 
@@ -95,9 +97,10 @@ Este es el factor principal. Los ectotermos funcionan principalmente con "energ�
 La energía emitida por un organismo se define por la **Ley de Stefan-Boltzmann**:
 
 $$
-Q_{out} = \epsilon \sigma T_s^4
+Q_{out} = A \epsilon \sigma T_s^4
 $$
 
+* **\(A\)**: Área de superficie radiativa (m²).
 * **\(\epsilon\)**: Emisividad (qué tan "negro" es el objeto en el espectro infrarrojo).
 * **\(\sigma\)**: Constante de Stefan-Boltzmann (\(5.67 \times 10^{-8} W m^{-2} K^{-4}\)).
 * **\(T_s\)**: Temperatura superficial en Kelvin.
