@@ -35,6 +35,17 @@ categories: ["People"]
   </div>
 
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+    <img src="/img/people/alfredo.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Alfredo G. Nicieza" />
+    <div>
+      <h3 class="text-xl font-bold mb-1">Alfredo G. Nicieza</h3>
+      <p class="text-base mb-1">Alfredo es ecólogo y profesor en la Universidad de Oviedo, y su investigación se centra en la ecología y evolución de los ectotermos. Su trabajo explora cómo la variación ambiental moldea el rendimiento, el desarrollo y la adaptación de los organismos, con especial interés en anfibios y peces de agua dulce. Combina enfoques experimentales con perspectivas ecológicas y evolutivas para comprender cómo responden los organismos a condiciones ambientales cambiantes. Su investigación también aborda la biodiversidad y la conservación, contribuyendo a comprender mejor cómo el cambio ambiental afecta a poblaciones y especies.</p>
+      <div class="flex gap-4">
+        <a href="https://imib.csic.es/nicieza-alfredo-g/" target="_blank" class="text-primary-500 hover:underline">Sitio web</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
     <img src="/img/people/antigoni.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Antigoni Kaliontzopoulou" />
     <div>
       <h3 class="text-xl font-bold mb-1">Antigoni Kaliontzopoulou</h3>

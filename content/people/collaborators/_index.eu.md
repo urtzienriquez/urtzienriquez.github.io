@@ -36,6 +36,17 @@ categories: ["People"]
   </div>
 
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+    <img src="/img/people/alfredo.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Alfredo G. Nicieza" />
+    <div>
+      <h3 class="text-xl font-bold mb-1">Alfredo G. Nicieza</h3>
+      <p class="text-base mb-1">Alfredo ekologoa eta irakaslea da Oviedoko Unibertsitatean, eta bere ikerketa ektotermoen ekologian eta eboluzioan oinarritzen da. Bere lanak ingurumen-aldakortasunak organismoen errendimenduan, garapenean eta egokitzapenetan duen eragina aztertzen du, bereziki anfibioetan eta ur gezako arrainetan. Ikuspegi esperimentalak ikuspegi ekologiko eta ebolutiboekin uztartzen ditu, organismoek ingurumen-baldintza aldakorrei nola erantzuten dieten ulertzeko. Bere ikerketak biodibertsitatea eta kontserbazioa ere jorratzen ditu, ingurumen-aldaketak populazioei eta espezieei nola eragiten dien hobeto ulertzen lagunduz.</p>
+      <div class="flex gap-4">
+        <a href="https://imib.csic.es/nicieza-alfredo-g/" target="_blank" class="text-primary-500 hover:underline">Webgunea</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
     <img src="/img/people/antigoni.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Antigoni Kaliontzopoulou" />
     <div>
       <h3 class="text-xl font-bold mb-1">Antigoni Kaliontzopoulou</h3>

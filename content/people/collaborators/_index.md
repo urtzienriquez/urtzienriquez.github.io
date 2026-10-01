@@ -36,6 +36,17 @@ categories: ["People"]
   </div>
 
   <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+    <img src="/img/people/alfredo.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Alfredo G. Nicieza" />
+    <div>
+      <h3 class="text-xl font-bold mb-1">Alfredo G. Nicieza</h3>
+      <p class="text-base mb-1">Alfredo is an ecologist and professor at the University of Oviedo, whose research focuses on the ecology and evolution of ectotherms. His work explores how environmental variation shapes organismal performance, development, and adaptation, with a particular interest in amphibians and freshwater fish. He combines experimental approaches with ecological and evolutionary perspectives to understand how organisms respond to changing environmental conditions. His research also addresses biodiversity and conservation, contributing to a better understanding of how environmental change affects populations and species.</p>
+      <div class="flex gap-4">
+        <a href="https://imib.csic.es/nicieza-alfredo-g/" target="_blank" class="text-primary-500 hover:underline">Website</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
     <img src="/img/people/antigoni.jpg" class="w-24 h-24 rounded-full object-cover shadow-sm" alt="Antigoni Kaliontzopoulou" />
     <div>
       <h3 class="text-xl font-bold mb-1">Antigoni Kaliontzopoulou</h3>
