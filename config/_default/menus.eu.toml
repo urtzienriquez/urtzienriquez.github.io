@@ -64,6 +64,12 @@
   pageRef = "programming/r"
   weight = 2
 
+[[main]]
+  parent = "Programazioa"
+  name = "C"
+  pageRef = "programming/c"
+  weight = 3
+
 #[[main]]
 #  name = "Parent"
 #  weight = 20
